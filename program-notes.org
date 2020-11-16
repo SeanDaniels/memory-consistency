@@ -1,0 +1,10 @@
+#+TITLE: Program Notes
+* General Notes
+- Provided input that represent trace instruction
+  - Load
+  - Store
+  - Lock
+  - Unlock
+- Hit latency = 10
+- Miss latency = 100
+- One instruction start per cycle

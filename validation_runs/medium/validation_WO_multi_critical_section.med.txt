@@ -1,0 +1,782 @@
+initally the cache is filled with :
+Contents of the cache are: 
+
+size of the L1cache is 0
+
+The WO total latency is : 0 cycles 
+*******************now processing W
+We found a miss for W   { 0, 0, 100}
+*******************now processing L
+We found a miss for L   { 1, 1, 101}
+*******************now processing R
+We found a miss for R   { 2, 2, 102}
+*******************now processing B
+We found a miss for B   { 3, 3, 103}
+*******************now processing B
+We found a hit for B    { 4, 103, 113}
+*******************now processing W
+We found a hit for W    { 5, 100, 110}
+*******************now processing M
+We found a miss for M   { 6, 6, 106}
+*******************now processing Q
+We found a miss for Q   { 7, 7, 107}
+*******************now processing B
+We found a hit for B    { 8, 113, 123}
+*******************now processing H
+We found a miss for H   { 9, 9, 109}
+*******************now processing C
+We found a miss for C   { 10, 10, 110}
+*******************now processing M
+We found a hit for M    { 11, 106, 116}
+*******************now processing D
+We found a miss for D   { 12, 12, 112}
+*******************now processing A
+We found a miss for A   { 13, 13, 113}
+*******************now processing R
+We found a hit for R    { 14, 102, 112}
+*******************now processing Z
+We found a miss for Z   { 15, 15, 115}
+*******************now processing O
+We found a miss for O   { 16, 16, 116}
+*******************now processing D
+We found a hit for D    { 17, 112, 122}
+*******************now processing W
+We found a hit for W    { 18, 110, 120}
+*******************now processing K
+We found a miss for K   { 19, 19, 119}
+*******************now processing K
+We found a hit for K    { 20, 119, 129}
+*******************now processing Y
+We found a miss for Y   { 21, 21, 121}
+*******************now processing H
+We found a hit for H    { 22, 109, 119}
+*******************now processing W
+We found a hit for W    { 23, 120, 130}
+*******************now processing I
+We found a miss for I   { 24, 24, 124}
+*******************now processing D
+We found a hit for D    { 25, 122, 132}
+*******************now processing D
+We found a hit for D    { 26, 132, 142}
+*******************now processing Q
+We found a hit for Q    { 27, 107, 117}
+*******************now processing S
+We found a miss for S   { 28, 28, 128}
+*******************now processing I
+We found a hit for I    { 29, 124, 134}
+*******************now processing Lock2
+We found a miss for 2   { 30, 142, 242}
+*******************now processing D
+We found a hit for D    { 31, 242, 252}
+*******************now processing R
+We found a hit for R    { 32, 242, 252}
+*******************now processing J
+We found a miss for J   { 33, 242, 342}
+*******************now processing D
+We found a hit for D    { 34, 252, 262}
+*******************now processing M
+We found a hit for M    { 35, 242, 252}
+*******************now processing O
+We found a hit for O    { 36, 242, 252}
+*******************now processing W
+We found a hit for W    { 37, 242, 252}
+*******************now processing F
+We found a miss for F   { 38, 242, 342}
+*******************now processing M
+We found a hit for M    { 39, 252, 262}
+*******************now processing R
+We found a hit for R    { 40, 252, 262}
+*******************now processing S
+We found a hit for S    { 41, 242, 252}
+*******************now processing J
+We found a hit for J    { 42, 342, 352}
+*******************now processing R
+We found a hit for R    { 43, 262, 272}
+*******************now processing Y
+We found a hit for Y    { 44, 242, 252}
+*******************now processing B
+We found a hit for B    { 45, 242, 252}
+*******************now processing L
+We found a hit for L    { 46, 242, 252}
+*******************now processing D
+We found a hit for D    { 47, 262, 272}
+*******************now processing Y
+We found a hit for Y    { 48, 252, 262}
+*******************now processing B
+We found a hit for B    { 49, 252, 262}
+*******************now processing E
+We found a miss for E   { 50, 242, 342}
+*******************now processing F
+We found a hit for F    { 51, 342, 352}
+*******************now processing S
+We found a hit for S    { 52, 252, 262}
+*******************now processing B
+We found a hit for B    { 53, 262, 272}
+*******************now processing A
+We found a hit for A    { 54, 242, 252}
+*******************now processing R
+We found a hit for R    { 55, 272, 282}
+*******************now processing C
+We found a hit for C    { 56, 242, 252}
+*******************now processing B
+We found a hit for B    { 57, 272, 282}
+*******************now processing A
+We found a hit for A    { 58, 252, 262}
+*******************now processing Y
+We found a hit for Y    { 59, 262, 272}
+*******************now processing N
+We found a miss for N   { 60, 242, 342}
+*******************now processing E
+We found a hit for E    { 61, 342, 352}
+*******************now processing C
+We found a hit for C    { 62, 252, 262}
+*******************now processing Y
+We found a hit for Y    { 63, 272, 282}
+*******************now processing D
+We found a hit for D    { 64, 272, 282}
+*******************now processing Y
+We found a hit for Y    { 65, 282, 292}
+*******************now processing G
+We found a miss for G   { 66, 242, 342}
+*******************now processing G
+We found a hit for G    { 67, 342, 352}
+*******************now processing D
+We found a hit for D    { 68, 282, 292}
+*******************now processing Unlock2
+We found a hit for 2    { 69, 352, 362}
+*******************now processing X
+We found a miss for X   { 70, 362, 462}
+*******************now processing X
+We found a hit for X    { 71, 462, 472}
+*******************now processing Lock15
+We found a miss for 15   { 72, 472, 572}
+*******************now processing K
+We found a hit for K    { 73, 572, 582}
+*******************now processing L
+We found a hit for L    { 74, 572, 582}
+*******************now processing O
+We found a hit for O    { 75, 572, 582}
+*******************now processing R
+We found a hit for R    { 76, 572, 582}
+*******************now processing K
+We found a hit for K    { 77, 582, 592}
+*******************now processing E
+We found a hit for E    { 78, 572, 582}
+*******************now processing L
+We found a hit for L    { 79, 582, 592}
+*******************now processing L
+We found a hit for L    { 80, 592, 602}
+*******************now processing N
+We found a hit for N    { 81, 572, 582}
+*******************now processing E
+We found a hit for E    { 82, 582, 592}
+*******************now processing M
+We found a hit for M    { 83, 572, 582}
+*******************now processing P
+We found a miss for P   { 84, 572, 672}
+*******************now processing A
+We found a hit for A    { 85, 572, 582}
+*******************now processing P
+We found a hit for P    { 86, 672, 682}
+*******************now processing M
+We found a hit for M    { 87, 582, 592}
+*******************now processing Q
+We found a hit for Q    { 88, 572, 582}
+*******************now processing F
+We found a hit for F    { 89, 572, 582}
+*******************now processing W
+We found a hit for W    { 90, 572, 582}
+*******************now processing K
+We found a hit for K    { 91, 592, 602}
+*******************now processing Q
+We found a hit for Q    { 92, 582, 592}
+*******************now processing H
+We found a hit for H    { 93, 572, 582}
+*******************now processing O
+We found a hit for O    { 94, 582, 592}
+*******************now processing P
+We found a hit for P    { 95, 682, 692}
+*******************now processing K
+We found a hit for K    { 96, 602, 612}
+*******************now processing H
+We found a hit for H    { 97, 582, 592}
+*******************now processing M
+We found a hit for M    { 98, 592, 602}
+*******************now processing C
+We found a hit for C    { 99, 572, 582}
+*******************now processing O
+We found a hit for O    { 100, 592, 602}
+*******************now processing Q
+We found a hit for Q    { 101, 592, 602}
+*******************now processing M
+We found a hit for M    { 102, 602, 612}
+*******************now processing H
+We found a hit for H    { 103, 592, 602}
+*******************now processing N
+We found a hit for N    { 104, 582, 592}
+*******************now processing W
+We found a hit for W    { 105, 582, 592}
+*******************now processing N
+We found a hit for N    { 106, 592, 602}
+*******************now processing H
+We found a hit for H    { 107, 602, 612}
+*******************now processing K
+We found a hit for K    { 108, 612, 622}
+*******************now processing U
+We found a miss for U   { 109, 572, 672}
+*******************now processing E
+We found a hit for E    { 110, 592, 602}
+*******************now processing W
+We found a hit for W    { 111, 592, 602}
+*******************now processing K
+We found a hit for K    { 112, 622, 632}
+*******************now processing Unlock15
+We found a hit for 15    { 113, 692, 702}
+*******************now processing S
+We found a hit for S    { 114, 702, 712}
+*******************now processing Q
+We found a hit for Q    { 115, 702, 712}
+*******************now processing M
+We found a hit for M    { 116, 702, 712}
+*******************now processing G
+We found a hit for G    { 117, 702, 712}
+*******************now processing B
+We found a hit for B    { 118, 702, 712}
+*******************now processing B
+We found a hit for B    { 119, 712, 722}
+*******************now processing U
+We found a hit for U    { 120, 702, 712}
+*******************now processing Q
+We found a hit for Q    { 121, 712, 722}
+*******************now processing C
+We found a hit for C    { 122, 702, 712}
+*******************now processing Lock11
+We found a miss for 11   { 123, 722, 822}
+*******************now processing J
+We found a hit for J    { 124, 822, 832}
+*******************now processing J
+We found a hit for J    { 125, 832, 842}
+*******************now processing I
+We found a hit for I    { 126, 822, 832}
+*******************now processing V
+We found a miss for V   { 127, 822, 922}
+*******************now processing J
+We found a hit for J    { 128, 842, 852}
+*******************now processing S
+We found a hit for S    { 129, 822, 832}
+*******************now processing W
+We found a hit for W    { 130, 822, 832}
+*******************now processing M
+We found a hit for M    { 131, 822, 832}
+*******************now processing D
+We found a hit for D    { 132, 822, 832}
+*******************now processing S
+We found a hit for S    { 133, 832, 842}
+*******************now processing K
+We found a hit for K    { 134, 822, 832}
+*******************now processing Q
+We found a hit for Q    { 135, 822, 832}
+*******************now processing T
+We found a miss for T   { 136, 822, 922}
+*******************now processing B
+We found a hit for B    { 137, 822, 832}
+*******************now processing K
+We found a hit for K    { 138, 832, 842}
+*******************now processing X
+We found a hit for X    { 139, 822, 832}
+*******************now processing I
+We found a hit for I    { 140, 832, 842}
+*******************now processing X
+We found a hit for X    { 141, 832, 842}
+*******************now processing M
+We found a hit for M    { 142, 832, 842}
+*******************now processing X
+We found a hit for X    { 143, 842, 852}
+*******************now processing V
+We found a hit for V    { 144, 922, 932}
+*******************now processing T
+We found a hit for T    { 145, 922, 932}
+*******************now processing R
+We found a hit for R    { 146, 822, 832}
+*******************now processing R
+We found a hit for R    { 147, 832, 842}
+*******************now processing V
+We found a hit for V    { 148, 932, 942}
+*******************now processing B
+We found a hit for B    { 149, 832, 842}
+*******************now processing L
+We found a hit for L    { 150, 822, 832}
+*******************now processing J
+We found a hit for J    { 151, 852, 862}
+*******************now processing P
+We found a hit for P    { 152, 822, 832}
+*******************now processing B
+We found a hit for B    { 153, 842, 852}
+*******************now processing T
+We found a hit for T    { 154, 932, 942}
+*******************now processing N
+We found a hit for N    { 155, 822, 832}
+*******************now processing S
+We found a hit for S    { 156, 842, 852}
+*******************now processing N
+We found a hit for N    { 157, 832, 842}
+*******************now processing T
+We found a hit for T    { 158, 942, 952}
+*******************now processing F
+We found a hit for F    { 159, 822, 832}
+*******************now processing W
+We found a hit for W    { 160, 832, 842}
+*******************now processing Z
+We found a hit for Z    { 161, 822, 832}
+*******************now processing Q
+We found a hit for Q    { 162, 832, 842}
+*******************now processing F
+We found a hit for F    { 163, 832, 842}
+*******************now processing Unlock11
+We found a hit for 11    { 164, 952, 962}
+*******************now processing J
+We found a hit for J    { 165, 962, 972}
+*******************now processing M
+We found a hit for M    { 166, 962, 972}
+*******************now processing A
+We found a hit for A    { 167, 962, 972}
+*******************now processing Lock5
+We found a miss for 5   { 168, 972, 1072}
+*******************now processing A
+We found a hit for A    { 169, 1072, 1082}
+*******************now processing D
+We found a hit for D    { 170, 1072, 1082}
+*******************now processing R
+We found a hit for R    { 171, 1072, 1082}
+*******************now processing R
+We found a hit for R    { 172, 1082, 1092}
+*******************now processing A
+We found a hit for A    { 173, 1082, 1092}
+*******************now processing W
+We found a hit for W    { 174, 1072, 1082}
+*******************now processing S
+We found a hit for S    { 175, 1072, 1082}
+*******************now processing O
+We found a hit for O    { 176, 1072, 1082}
+*******************now processing F
+We found a hit for F    { 177, 1072, 1082}
+*******************now processing W
+We found a hit for W    { 178, 1082, 1092}
+*******************now processing S
+We found a hit for S    { 179, 1082, 1092}
+*******************now processing B
+We found a hit for B    { 180, 1072, 1082}
+*******************now processing C
+We found a hit for C    { 181, 1072, 1082}
+*******************now processing N
+We found a hit for N    { 182, 1072, 1082}
+*******************now processing S
+We found a hit for S    { 183, 1092, 1102}
+*******************now processing U
+We found a hit for U    { 184, 1072, 1082}
+*******************now processing V
+We found a hit for V    { 185, 1072, 1082}
+*******************now processing Q
+We found a hit for Q    { 186, 1072, 1082}
+*******************now processing H
+We found a hit for H    { 187, 1072, 1082}
+*******************now processing U
+We found a hit for U    { 188, 1082, 1092}
+*******************now processing F
+We found a hit for F    { 189, 1082, 1092}
+*******************now processing F
+We found a hit for F    { 190, 1092, 1102}
+*******************now processing B
+We found a hit for B    { 191, 1082, 1092}
+*******************now processing S
+We found a hit for S    { 192, 1102, 1112}
+*******************now processing F
+We found a hit for F    { 193, 1102, 1112}
+*******************now processing A
+We found a hit for A    { 194, 1092, 1102}
+*******************now processing Q
+We found a hit for Q    { 195, 1082, 1092}
+*******************now processing X
+We found a hit for X    { 196, 1072, 1082}
+*******************now processing W
+We found a hit for W    { 197, 1092, 1102}
+*******************now processing A
+We found a hit for A    { 198, 1102, 1112}
+*******************now processing P
+We found a hit for P    { 199, 1072, 1082}
+*******************now processing Q
+We found a hit for Q    { 200, 1092, 1102}
+*******************now processing C
+We found a hit for C    { 201, 1082, 1092}
+*******************now processing A
+We found a hit for A    { 202, 1112, 1122}
+*******************now processing P
+We found a hit for P    { 203, 1082, 1092}
+*******************now processing C
+We found a hit for C    { 204, 1092, 1102}
+*******************now processing E
+We found a hit for E    { 205, 1072, 1082}
+*******************now processing H
+We found a hit for H    { 206, 1082, 1092}
+*******************now processing C
+We found a hit for C    { 207, 1102, 1112}
+*******************now processing C
+We found a hit for C    { 208, 1112, 1122}
+*******************now processing Unlock5
+We found a hit for 5    { 209, 1122, 1132}
+*******************now processing Z
+We found a hit for Z    { 210, 1132, 1142}
+*******************now processing V
+We found a hit for V    { 211, 1132, 1142}
+*******************now processing F
+We found a hit for F    { 212, 1132, 1142}
+*******************now processing Lock17
+We found a miss for 17   { 213, 1142, 1242}
+*******************now processing K
+We found a hit for K    { 214, 1242, 1252}
+*******************now processing M
+We found a hit for M    { 215, 1242, 1252}
+*******************now processing L
+We found a hit for L    { 216, 1242, 1252}
+*******************now processing N
+We found a hit for N    { 217, 1242, 1252}
+*******************now processing K
+We found a hit for K    { 218, 1252, 1262}
+*******************now processing O
+We found a hit for O    { 219, 1242, 1252}
+*******************now processing Z
+We found a hit for Z    { 220, 1242, 1252}
+*******************now processing J
+We found a hit for J    { 221, 1242, 1252}
+*******************now processing K
+We found a hit for K    { 222, 1262, 1272}
+*******************now processing O
+We found a hit for O    { 223, 1252, 1262}
+*******************now processing P
+We found a hit for P    { 224, 1242, 1252}
+*******************now processing Q
+We found a hit for Q    { 225, 1242, 1252}
+*******************now processing P
+We found a hit for P    { 226, 1252, 1262}
+*******************now processing X
+We found a hit for X    { 227, 1242, 1252}
+*******************now processing P
+We found a hit for P    { 228, 1262, 1272}
+*******************now processing R
+We found a hit for R    { 229, 1242, 1252}
+*******************now processing J
+We found a hit for J    { 230, 1252, 1262}
+*******************now processing X
+We found a hit for X    { 231, 1252, 1262}
+*******************now processing K
+We found a hit for K    { 232, 1272, 1282}
+*******************now processing R
+We found a hit for R    { 233, 1252, 1262}
+*******************now processing I
+We found a hit for I    { 234, 1242, 1252}
+*******************now processing T
+We found a hit for T    { 235, 1242, 1252}
+*******************now processing Z
+We found a hit for Z    { 236, 1252, 1262}
+*******************now processing Y
+We found a hit for Y    { 237, 1242, 1252}
+*******************now processing I
+We found a hit for I    { 238, 1252, 1262}
+*******************now processing X
+We found a hit for X    { 239, 1262, 1272}
+*******************now processing A
+We found a hit for A    { 240, 1242, 1252}
+*******************now processing C
+We found a hit for C    { 241, 1242, 1252}
+*******************now processing B
+We found a hit for B    { 242, 1242, 1252}
+*******************now processing X
+We found a hit for X    { 243, 1272, 1282}
+*******************now processing H
+We found a hit for H    { 244, 1242, 1252}
+*******************now processing H
+We found a hit for H    { 245, 1252, 1262}
+*******************now processing K
+We found a hit for K    { 246, 1282, 1292}
+*******************now processing I
+We found a hit for I    { 247, 1262, 1272}
+*******************now processing H
+We found a hit for H    { 248, 1262, 1272}
+*******************now processing C
+We found a hit for C    { 249, 1252, 1262}
+*******************now processing Q
+We found a hit for Q    { 250, 1252, 1262}
+*******************now processing C
+We found a hit for C    { 251, 1262, 1272}
+*******************now processing O
+We found a hit for O    { 252, 1262, 1272}
+*******************now processing C
+We found a hit for C    { 253, 1272, 1282}
+*******************now processing Unlock17
+We found a hit for 17    { 254, 1292, 1302}
+*******************now processing N
+We found a hit for N    { 255, 1302, 1312}
+*******************now processing D
+We found a hit for D    { 256, 1302, 1312}
+*******************now processing T
+We found a hit for T    { 257, 1302, 1312}
+*******************now processing O
+We found a hit for O    { 258, 1302, 1312}
+*******************now processing M
+We found a hit for M    { 259, 1302, 1312}
+*******************now processing F
+We found a hit for F    { 260, 1302, 1312}
+*******************now processing G
+We found a hit for G    { 261, 1302, 1312}
+*******************now processing D
+We found a hit for D    { 262, 1312, 1322}
+*******************now processing Lock22
+We found a miss for 22   { 263, 1322, 1422}
+*******************now processing D
+We found a hit for D    { 264, 1422, 1432}
+*******************now processing W
+We found a hit for W    { 265, 1422, 1432}
+*******************now processing F
+We found a hit for F    { 266, 1422, 1432}
+*******************now processing C
+We found a hit for C    { 267, 1422, 1432}
+*******************now processing D
+We found a hit for D    { 268, 1432, 1442}
+*******************now processing G
+We found a hit for G    { 269, 1422, 1432}
+*******************now processing P
+We found a hit for P    { 270, 1422, 1432}
+*******************now processing X
+We found a hit for X    { 271, 1422, 1432}
+*******************now processing I
+We found a hit for I    { 272, 1422, 1432}
+*******************now processing G
+We found a hit for G    { 273, 1432, 1442}
+*******************now processing Q
+We found a hit for Q    { 274, 1422, 1432}
+*******************now processing V
+We found a hit for V    { 275, 1422, 1432}
+*******************now processing K
+We found a hit for K    { 276, 1422, 1432}
+*******************now processing U
+We found a hit for U    { 277, 1422, 1432}
+*******************now processing Q
+We found a hit for Q    { 278, 1432, 1442}
+*******************now processing Y
+We found a hit for Y    { 279, 1422, 1432}
+*******************now processing T
+We found a hit for T    { 280, 1422, 1432}
+*******************now processing D
+We found a hit for D    { 281, 1442, 1452}
+*******************now processing L
+We found a hit for L    { 282, 1422, 1432}
+*******************now processing Y
+We found a hit for Y    { 283, 1432, 1442}
+*******************now processing C
+We found a hit for C    { 284, 1432, 1442}
+*******************now processing G
+We found a hit for G    { 285, 1442, 1452}
+*******************now processing D
+We found a hit for D    { 286, 1452, 1462}
+*******************now processing E
+We found a hit for E    { 287, 1422, 1432}
+*******************now processing C
+We found a hit for C    { 288, 1442, 1452}
+*******************now processing W
+We found a hit for W    { 289, 1432, 1442}
+*******************now processing H
+We found a hit for H    { 290, 1422, 1432}
+*******************now processing T
+We found a hit for T    { 291, 1432, 1442}
+*******************now processing A
+We found a hit for A    { 292, 1422, 1432}
+*******************now processing W
+We found a hit for W    { 293, 1442, 1452}
+*******************now processing C
+We found a hit for C    { 294, 1452, 1462}
+*******************now processing I
+We found a hit for I    { 295, 1432, 1442}
+*******************now processing O
+We found a hit for O    { 296, 1422, 1432}
+*******************now processing H
+We found a hit for H    { 297, 1432, 1442}
+*******************now processing C
+We found a hit for C    { 298, 1462, 1472}
+*******************now processing O
+We found a hit for O    { 299, 1432, 1442}
+*******************now processing R
+We found a hit for R    { 300, 1422, 1432}
+*******************now processing D
+We found a hit for D    { 301, 1462, 1472}
+*******************now processing T
+We found a hit for T    { 302, 1442, 1452}
+*******************now processing O
+We found a hit for O    { 303, 1442, 1452}
+*******************now processing Unlock22
+We found a hit for 22    { 304, 1472, 1482}
+*******************now processing Lock10
+We found a miss for 10   { 305, 1482, 1582}
+*******************now processing V
+We found a hit for V    { 306, 1582, 1592}
+*******************now processing W
+We found a hit for W    { 307, 1582, 1592}
+*******************now processing C
+We found a hit for C    { 308, 1582, 1592}
+*******************now processing S
+We found a hit for S    { 309, 1582, 1592}
+*******************now processing V
+We found a hit for V    { 310, 1592, 1602}
+*******************now processing G
+We found a hit for G    { 311, 1582, 1592}
+*******************now processing S
+We found a hit for S    { 312, 1592, 1602}
+*******************now processing P
+We found a hit for P    { 313, 1582, 1592}
+*******************now processing Q
+We found a hit for Q    { 314, 1582, 1592}
+*******************now processing G
+We found a hit for G    { 315, 1592, 1602}
+*******************now processing O
+We found a hit for O    { 316, 1582, 1592}
+*******************now processing Q
+We found a hit for Q    { 317, 1592, 1602}
+*******************now processing M
+We found a hit for M    { 318, 1582, 1592}
+*******************now processing S
+We found a hit for S    { 319, 1602, 1612}
+*******************now processing O
+We found a hit for O    { 320, 1592, 1602}
+*******************now processing B
+We found a hit for B    { 321, 1582, 1592}
+*******************now processing O
+We found a hit for O    { 322, 1602, 1612}
+*******************now processing A
+We found a hit for A    { 323, 1582, 1592}
+*******************now processing G
+We found a hit for G    { 324, 1602, 1612}
+*******************now processing B
+We found a hit for B    { 325, 1592, 1602}
+*******************now processing U
+We found a hit for U    { 326, 1582, 1592}
+*******************now processing W
+We found a hit for W    { 327, 1592, 1602}
+*******************now processing N
+We found a hit for N    { 328, 1582, 1592}
+*******************now processing N
+We found a hit for N    { 329, 1592, 1602}
+*******************now processing U
+We found a hit for U    { 330, 1592, 1602}
+*******************now processing Y
+We found a hit for Y    { 331, 1582, 1592}
+*******************now processing Q
+We found a hit for Q    { 332, 1602, 1612}
+*******************now processing X
+We found a hit for X    { 333, 1582, 1592}
+*******************now processing N
+We found a hit for N    { 334, 1602, 1612}
+*******************now processing Y
+We found a hit for Y    { 335, 1592, 1602}
+*******************now processing Z
+We found a hit for Z    { 336, 1582, 1592}
+*******************now processing L
+We found a hit for L    { 337, 1582, 1592}
+*******************now processing G
+We found a hit for G    { 338, 1612, 1622}
+*******************now processing D
+We found a hit for D    { 339, 1582, 1592}
+*******************now processing Z
+We found a hit for Z    { 340, 1592, 1602}
+*******************now processing G
+We found a hit for G    { 341, 1622, 1632}
+*******************now processing W
+We found a hit for W    { 342, 1602, 1612}
+*******************now processing P
+We found a hit for P    { 343, 1592, 1602}
+*******************now processing B
+We found a hit for B    { 344, 1602, 1612}
+*******************now processing G
+We found a hit for G    { 345, 1632, 1642}
+*******************now processing Unlock10
+We found a hit for 10    { 346, 1642, 1652}
+*******************now processing R
+We found a hit for R    { 347, 1652, 1662}
+*******************now processing W
+We found a hit for W    { 348, 1652, 1662}
+*******************now processing B
+We found a hit for B    { 349, 1652, 1662}
+*******************now processing L
+We found a hit for L    { 350, 1652, 1662}
+*******************now processing N
+We found a hit for N    { 351, 1652, 1662}
+*******************now processing W
+We found a hit for W    { 352, 1662, 1672}
+*******************now processing S
+We found a hit for S    { 353, 1652, 1662}
+*******************now processing A
+We found a hit for A    { 354, 1652, 1662}
+*******************now processing D
+We found a hit for D    { 355, 1652, 1662}
+*******************now processing E
+We found a hit for E    { 356, 1652, 1662}
+*******************now processing S
+We found a hit for S    { 357, 1662, 1672}
+*******************now processing U
+We found a hit for U    { 358, 1652, 1662}
+*******************now processing G
+We found a hit for G    { 359, 1652, 1662}
+*******************now processing U
+We found a hit for U    { 360, 1662, 1672}
+*******************now processing U
+We found a hit for U    { 361, 1672, 1682}
+*******************now processing U
+We found a hit for U    { 362, 1682, 1692}
+*******************now processing M
+We found a hit for M    { 363, 1652, 1662}
+*******************now processing O
+We found a hit for O    { 364, 1652, 1662}
+*******************now processing Q
+We found a hit for Q    { 365, 1652, 1662}
+*******************now processing C
+We found a hit for C    { 366, 1652, 1662}
+*******************now processing M
+We found a hit for M    { 367, 1662, 1672}
+finally the cache is filled with :
+Contents of the cache are: 
+W    { 352, 1662, 1672}
+L    { 350, 1652, 1662}
+R    { 347, 1652, 1662}
+B    { 349, 1652, 1662}
+M    { 367, 1662, 1672}
+Q    { 365, 1652, 1662}
+H    { 297, 1432, 1442}
+C    { 366, 1652, 1662}
+D    { 355, 1652, 1662}
+A    { 354, 1652, 1662}
+Z    { 340, 1592, 1602}
+O    { 364, 1652, 1662}
+K    { 276, 1422, 1432}
+Y    { 335, 1592, 1602}
+I    { 295, 1432, 1442}
+S    { 357, 1662, 1672}
+2    { 69, 352, 362}
+J    { 230, 1252, 1262}
+F    { 266, 1422, 1432}
+E    { 356, 1652, 1662}
+N    { 351, 1652, 1662}
+G    { 359, 1652, 1662}
+X    { 333, 1582, 1592}
+15    { 113, 692, 702}
+P    { 343, 1592, 1602}
+U    { 362, 1682, 1692}
+11    { 164, 952, 962}
+V    { 310, 1592, 1602}
+T    { 302, 1442, 1452}
+5    { 209, 1122, 1132}
+17    { 254, 1292, 1302}
+22    { 304, 1472, 1482}
+10    { 346, 1642, 1652}
+
+size of the L1cache is 33
+
+The WO total latency is : 1692 cycles 
+The avg WO critical section latency is : 191 which is derived from 1340 / 7

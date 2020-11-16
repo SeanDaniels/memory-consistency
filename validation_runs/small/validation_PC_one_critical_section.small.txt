@@ -1,0 +1,200 @@
+initally the cache is filled with :
+Contents of the cache are: 
+
+size of the L1cache is 0
+
+The PC total latency is : 0 cycles 
+*******************now processing G
+We found a miss for G   { 0, 0, 100}
+*******************now processing H
+We found a miss for H   { 1, 100, 200}
+*******************now processing F
+We found a miss for F   { 2, 200, 300}
+*******************now processing D
+We found a miss for D   { 3, 300, 400}
+*******************now processing G
+We found a hit for G    { 4, 400, 410}
+*******************now processing Lock0
+We found a miss for 0   { 5, 410, 510}
+*******************now processing G
+We found a hit for G    { 6, 510, 520}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 7, 520, 521}
+*******************now processing J
+We found a miss for J   { 8, 520, 620}
+*******************now processing B
+We found a miss for B   { 9, 620, 720}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 10, 720, 721}
+*******************now processing H
+We found a hit for H    { 11, 720, 730}
+*******************now processing A
+Added A to the Store Buffer without any eviction    { 12, 730, 731}
+*******************now processing J
+We found a hit for J    { 13, 730, 740}
+*******************now processing D
+We found a hit for D    { 14, 740, 750}
+*******************now processing G
+Added G to the Store Buffer without any eviction    { 15, 750, 751}
+*******************now processing A
+Edited A in the Store Buffer as there was a hit; and    { 16, 751, 752}
+*******************now processing G
+We found a hit for G    { 17, 750, 760}
+*******************now processing G
+We found a hit for G    { 18, 760, 770}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 19, 770, 771}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 20, 771, 772}
+*******************now processing B
+We found a hit for B    { 21, 770, 780}
+*******************now processing I
+Added I to the Store Buffer without any eviction    { 22, 780, 781}
+*******************now processing H
+We found a hit for H    { 23, 780, 790}
+*******************now processing J
+We found a hit for J    { 24, 790, 800}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 25, 800, 801}
+*******************now processing A
+Edited A in the Store Buffer as there was a hit; and    { 26, 801, 802}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 27, 802, 803}
+*******************now processing D
+We found a hit for D    { 28, 800, 810}
+*******************now processing G
+We found a hit for G    { 29, 810, 820}
+*******************now processing H
+We found a hit for H    { 30, 820, 830}
+*******************now processing F
+We found a hit for F    { 31, 830, 840}
+*******************now processing J
+We found a hit for J    { 32, 840, 850}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 33, 850, 851}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 34, 851, 852}
+*******************now processing I
+Edited I in the Store Buffer as there was a hit; and    { 35, 852, 853}
+*******************now processing J
+We found a hit for J    { 36, 850, 860}
+*******************now processing H
+We found a hit for H    { 37, 860, 870}
+*******************now processing D
+We found a hit for D    { 38, 870, 880}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 39, 880, 881}
+*******************now processing B
+We found a hit for B    { 40, 880, 890}
+*******************now processing H
+We found a hit for H    { 41, 890, 900}
+*******************now processing C
+We found a miss for C   { 42, 900, 1000}
+*******************now processing J
+We found a hit for J    { 43, 1000, 1010}
+*******************now processing D
+We found a hit for D    { 44, 1010, 1020}
+*******************now processing B
+We found a hit for B    { 45, 1020, 1030}
+*******************now processing J
+We found a hit for J    { 46, 1030, 1040}
+*******************now processing E
+Added E to the Store Buffer without any eviction    { 47, 1040, 1041}
+*******************now processing H
+We found a hit for H    { 48, 1040, 1050}
+*******************now processing I
+Edited I in the Store Buffer as there was a hit; and    { 49, 1050, 1051}
+*******************now processing E
+Edited E in the Store Buffer as there was a hit; and    { 50, 1051, 1052}
+*******************now processing F
+We found a hit for F    { 51, 1050, 1060}
+*******************now processing A
+Edited A in the Store Buffer as there was a hit; and    { 52, 1060, 1061}
+*******************now processing C
+We found a hit for C    { 53, 1060, 1070}
+*******************now processing N
+We found a miss for N   { 54, 1070, 1170}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 55, 1170, 1171}
+*******************now processing B
+We found a hit for B    { 56, 1170, 1180}
+*******************now processing A
+Edited A in the Store Buffer as there was a hit; and    { 57, 1180, 1181}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 58, 1181, 1182}
+*******************now processing D
+We found a hit for D    { 59, 1180, 1190}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 60, 1190, 1191}
+*******************now processing A
+Edited A in the Store Buffer as there was a hit; and    { 61, 1191, 1192}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 62, 1192, 1193}
+*******************now processing B
+We found a hit for B    { 63, 1190, 1200}
+*******************now processing F
+We found a hit for F    { 64, 1200, 1210}
+*******************now processing N
+We found a hit for N    { 65, 1210, 1220}
+*******************now processing Unlock0
+We found a hit for C    { 60, 1220, 1230}
+We found a hit for G    { 62, 1220, 1230}
+We found a miss for A   { 61, 1220, 1320}
+We found a miss for I   { 49, 1220, 1320}
+We found a miss for E   { 50, 1220, 1320}
+We found a hit for 0    { 66, 1320, 1330}
+*******************now processing K
+Added K to the Store Buffer without any eviction    { 67, 1330, 1331}
+*******************now processing H
+We found a hit for H    { 68, 1220, 1230}
+*******************now processing G
+Added G to the Store Buffer without any eviction    { 69, 1331, 1332}
+*******************now processing F
+We found a hit for F    { 70, 1230, 1240}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 71, 1332, 1333}
+*******************now processing J
+We found a hit for J    { 72, 1240, 1250}
+*******************now processing D
+We found a hit for D    { 73, 1250, 1260}
+*******************now processing H
+We found a hit for H    { 74, 1260, 1270}
+*******************now processing R
+We found a miss for R   { 75, 1270, 1370}
+*******************now processing E
+Added E to the Store Buffer without any eviction    { 76, 1370, 1371}
+*******************now processing F
+We found a hit for F    { 77, 1370, 1380}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 78, 1380, 1381}
+*******************now processing F
+We found a hit for F    { 79, 1380, 1390}
+*******************now processing E
+Edited E in the Store Buffer as there was a hit; and    { 80, 1390, 1391}
+*******************now processing R
+We found a hit for R    { 81, 1390, 1400}
+We found a hit for G    { 71, 1400, 1410}
+We found a hit for E    { 80, 1400, 1410}
+We found a hit for C    { 78, 1400, 1410}
+We found a miss for K   { 67, 1400, 1500}
+finally the cache is filled with :
+Contents of the cache are: 
+G    { 71, 1400, 1410}
+H    { 74, 1260, 1270}
+F    { 79, 1380, 1390}
+D    { 73, 1250, 1260}
+0    { 66, 1320, 1330}
+J    { 72, 1240, 1250}
+B    { 63, 1190, 1200}
+C    { 78, 1400, 1410}
+N    { 65, 1210, 1220}
+A    { 61, 1220, 1320}
+I    { 49, 1220, 1320}
+E    { 80, 1400, 1410}
+R    { 81, 1390, 1400}
+K    { 67, 1400, 1500}
+
+size of the L1cache is 14
+
+The PC total latency is : 1400 cycles 
+The avg PC critical section latency is : 920 which is derived from 920 / 1

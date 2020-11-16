@@ -1,0 +1,191 @@
+initally the cache is filled with :
+Contents of the cache are: 
+
+size of the L1cache is 0
+
+The SC total latency is : 0 cycles 
+*******************now processing G
+We found a miss for G   { 0, 0, 100}
+*******************now processing H
+We found a miss for H   { 1, 100, 200}
+*******************now processing F
+We found a miss for F   { 2, 200, 300}
+*******************now processing D
+We found a miss for D   { 3, 300, 400}
+*******************now processing G
+We found a hit for G    { 4, 400, 410}
+*******************now processing Lock0
+We found a miss for 0   { 5, 410, 510}
+*******************now processing G
+We found a hit for G    { 6, 510, 520}
+*******************now processing C
+We found a miss for C   { 7, 520, 620}
+*******************now processing J
+We found a miss for J   { 8, 620, 720}
+*******************now processing B
+We found a miss for B   { 9, 720, 820}
+*******************now processing C
+We found a hit for C    { 10, 820, 830}
+*******************now processing H
+We found a hit for H    { 11, 830, 840}
+*******************now processing A
+We found a miss for A   { 12, 840, 940}
+*******************now processing J
+We found a hit for J    { 13, 940, 950}
+*******************now processing D
+We found a hit for D    { 14, 950, 960}
+*******************now processing G
+We found a hit for G    { 15, 960, 970}
+*******************now processing A
+We found a hit for A    { 16, 970, 980}
+*******************now processing G
+We found a hit for G    { 17, 980, 990}
+*******************now processing G
+We found a hit for G    { 18, 990, 1000}
+*******************now processing C
+We found a hit for C    { 19, 1000, 1010}
+*******************now processing G
+We found a hit for G    { 20, 1010, 1020}
+*******************now processing B
+We found a hit for B    { 21, 1020, 1030}
+*******************now processing I
+We found a miss for I   { 22, 1030, 1130}
+*******************now processing H
+We found a hit for H    { 23, 1130, 1140}
+*******************now processing J
+We found a hit for J    { 24, 1140, 1150}
+*******************now processing C
+We found a hit for C    { 25, 1150, 1160}
+*******************now processing A
+We found a hit for A    { 26, 1160, 1170}
+*******************now processing C
+We found a hit for C    { 27, 1170, 1180}
+*******************now processing D
+We found a hit for D    { 28, 1180, 1190}
+*******************now processing G
+We found a hit for G    { 29, 1190, 1200}
+*******************now processing H
+We found a hit for H    { 30, 1200, 1210}
+*******************now processing F
+We found a hit for F    { 31, 1210, 1220}
+*******************now processing J
+We found a hit for J    { 32, 1220, 1230}
+*******************now processing C
+We found a hit for C    { 33, 1230, 1240}
+*******************now processing C
+We found a hit for C    { 34, 1240, 1250}
+*******************now processing I
+We found a hit for I    { 35, 1250, 1260}
+*******************now processing J
+We found a hit for J    { 36, 1260, 1270}
+*******************now processing H
+We found a hit for H    { 37, 1270, 1280}
+*******************now processing D
+We found a hit for D    { 38, 1280, 1290}
+*******************now processing G
+We found a hit for G    { 39, 1290, 1300}
+*******************now processing B
+We found a hit for B    { 40, 1300, 1310}
+*******************now processing H
+We found a hit for H    { 41, 1310, 1320}
+*******************now processing C
+We found a hit for C    { 42, 1320, 1330}
+*******************now processing J
+We found a hit for J    { 43, 1330, 1340}
+*******************now processing D
+We found a hit for D    { 44, 1340, 1350}
+*******************now processing B
+We found a hit for B    { 45, 1350, 1360}
+*******************now processing J
+We found a hit for J    { 46, 1360, 1370}
+*******************now processing E
+We found a miss for E   { 47, 1370, 1470}
+*******************now processing H
+We found a hit for H    { 48, 1470, 1480}
+*******************now processing I
+We found a hit for I    { 49, 1480, 1490}
+*******************now processing E
+We found a hit for E    { 50, 1490, 1500}
+*******************now processing F
+We found a hit for F    { 51, 1500, 1510}
+*******************now processing A
+We found a hit for A    { 52, 1510, 1520}
+*******************now processing C
+We found a hit for C    { 53, 1520, 1530}
+*******************now processing N
+We found a miss for N   { 54, 1530, 1630}
+*******************now processing G
+We found a hit for G    { 55, 1630, 1640}
+*******************now processing B
+We found a hit for B    { 56, 1640, 1650}
+*******************now processing A
+We found a hit for A    { 57, 1650, 1660}
+*******************now processing G
+We found a hit for G    { 58, 1660, 1670}
+*******************now processing D
+We found a hit for D    { 59, 1670, 1680}
+*******************now processing C
+We found a hit for C    { 60, 1680, 1690}
+*******************now processing A
+We found a hit for A    { 61, 1690, 1700}
+*******************now processing G
+We found a hit for G    { 62, 1700, 1710}
+*******************now processing B
+We found a hit for B    { 63, 1710, 1720}
+*******************now processing F
+We found a hit for F    { 64, 1720, 1730}
+*******************now processing N
+We found a hit for N    { 65, 1730, 1740}
+*******************now processing Unlock0
+We found a hit for 0    { 66, 1740, 1750}
+*******************now processing K
+We found a miss for K   { 67, 1750, 1850}
+*******************now processing H
+We found a hit for H    { 68, 1850, 1860}
+*******************now processing G
+We found a hit for G    { 69, 1860, 1870}
+*******************now processing F
+We found a hit for F    { 70, 1870, 1880}
+*******************now processing G
+We found a hit for G    { 71, 1880, 1890}
+*******************now processing J
+We found a hit for J    { 72, 1890, 1900}
+*******************now processing D
+We found a hit for D    { 73, 1900, 1910}
+*******************now processing H
+We found a hit for H    { 74, 1910, 1920}
+*******************now processing R
+We found a miss for R   { 75, 1920, 2020}
+*******************now processing E
+We found a hit for E    { 76, 2020, 2030}
+*******************now processing F
+We found a hit for F    { 77, 2030, 2040}
+*******************now processing C
+We found a hit for C    { 78, 2040, 2050}
+*******************now processing F
+We found a hit for F    { 79, 2050, 2060}
+*******************now processing E
+We found a hit for E    { 80, 2060, 2070}
+*******************now processing R
+We found a hit for R    { 81, 2070, 2080}
+finally the cache is filled with :
+Contents of the cache are: 
+G    { 71, 1880, 1890}
+H    { 74, 1910, 1920}
+F    { 79, 2050, 2060}
+D    { 73, 1900, 1910}
+0    { 66, 1740, 1750}
+C    { 78, 2040, 2050}
+J    { 72, 1890, 1900}
+B    { 63, 1710, 1720}
+A    { 61, 1690, 1700}
+I    { 49, 1480, 1490}
+E    { 80, 2060, 2070}
+N    { 65, 1730, 1740}
+K    { 67, 1750, 1850}
+R    { 81, 2070, 2080}
+
+size of the L1cache is 14
+
+The SC total latency is : 2080 cycles 
+The avg SC critical section latency is : 1340 which is derived from 1340 / 1

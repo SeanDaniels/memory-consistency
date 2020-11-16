@@ -1,0 +1,191 @@
+initally the cache is filled with :
+Contents of the cache are: 
+
+size of the L1cache is 0
+
+The WO total latency is : 0 cycles 
+*******************now processing G
+We found a miss for G   { 0, 0, 100}
+*******************now processing H
+We found a miss for H   { 1, 1, 101}
+*******************now processing F
+We found a miss for F   { 2, 2, 102}
+*******************now processing D
+We found a miss for D   { 3, 3, 103}
+*******************now processing G
+We found a hit for G    { 4, 100, 110}
+*******************now processing Lock0
+We found a miss for 0   { 5, 110, 210}
+*******************now processing G
+We found a hit for G    { 6, 210, 220}
+*******************now processing C
+We found a miss for C   { 7, 210, 310}
+*******************now processing J
+We found a miss for J   { 8, 210, 310}
+*******************now processing B
+We found a miss for B   { 9, 210, 310}
+*******************now processing C
+We found a hit for C    { 10, 310, 320}
+*******************now processing H
+We found a hit for H    { 11, 210, 220}
+*******************now processing A
+We found a miss for A   { 12, 210, 310}
+*******************now processing J
+We found a hit for J    { 13, 310, 320}
+*******************now processing D
+We found a hit for D    { 14, 210, 220}
+*******************now processing G
+We found a hit for G    { 15, 220, 230}
+*******************now processing A
+We found a hit for A    { 16, 310, 320}
+*******************now processing G
+We found a hit for G    { 17, 230, 240}
+*******************now processing G
+We found a hit for G    { 18, 240, 250}
+*******************now processing C
+We found a hit for C    { 19, 320, 330}
+*******************now processing G
+We found a hit for G    { 20, 250, 260}
+*******************now processing B
+We found a hit for B    { 21, 310, 320}
+*******************now processing I
+We found a miss for I   { 22, 210, 310}
+*******************now processing H
+We found a hit for H    { 23, 220, 230}
+*******************now processing J
+We found a hit for J    { 24, 320, 330}
+*******************now processing C
+We found a hit for C    { 25, 330, 340}
+*******************now processing A
+We found a hit for A    { 26, 320, 330}
+*******************now processing C
+We found a hit for C    { 27, 340, 350}
+*******************now processing D
+We found a hit for D    { 28, 220, 230}
+*******************now processing G
+We found a hit for G    { 29, 260, 270}
+*******************now processing H
+We found a hit for H    { 30, 230, 240}
+*******************now processing F
+We found a hit for F    { 31, 210, 220}
+*******************now processing J
+We found a hit for J    { 32, 330, 340}
+*******************now processing C
+We found a hit for C    { 33, 350, 360}
+*******************now processing C
+We found a hit for C    { 34, 360, 370}
+*******************now processing I
+We found a hit for I    { 35, 310, 320}
+*******************now processing J
+We found a hit for J    { 36, 340, 350}
+*******************now processing H
+We found a hit for H    { 37, 240, 250}
+*******************now processing D
+We found a hit for D    { 38, 230, 240}
+*******************now processing G
+We found a hit for G    { 39, 270, 280}
+*******************now processing B
+We found a hit for B    { 40, 320, 330}
+*******************now processing H
+We found a hit for H    { 41, 250, 260}
+*******************now processing C
+We found a hit for C    { 42, 370, 380}
+*******************now processing J
+We found a hit for J    { 43, 350, 360}
+*******************now processing D
+We found a hit for D    { 44, 240, 250}
+*******************now processing B
+We found a hit for B    { 45, 330, 340}
+*******************now processing J
+We found a hit for J    { 46, 360, 370}
+*******************now processing E
+We found a miss for E   { 47, 210, 310}
+*******************now processing H
+We found a hit for H    { 48, 260, 270}
+*******************now processing I
+We found a hit for I    { 49, 320, 330}
+*******************now processing E
+We found a hit for E    { 50, 310, 320}
+*******************now processing F
+We found a hit for F    { 51, 220, 230}
+*******************now processing A
+We found a hit for A    { 52, 330, 340}
+*******************now processing C
+We found a hit for C    { 53, 380, 390}
+*******************now processing N
+We found a miss for N   { 54, 210, 310}
+*******************now processing G
+We found a hit for G    { 55, 280, 290}
+*******************now processing B
+We found a hit for B    { 56, 340, 350}
+*******************now processing A
+We found a hit for A    { 57, 340, 350}
+*******************now processing G
+We found a hit for G    { 58, 290, 300}
+*******************now processing D
+We found a hit for D    { 59, 250, 260}
+*******************now processing C
+We found a hit for C    { 60, 390, 400}
+*******************now processing A
+We found a hit for A    { 61, 350, 360}
+*******************now processing G
+We found a hit for G    { 62, 300, 310}
+*******************now processing B
+We found a hit for B    { 63, 350, 360}
+*******************now processing F
+We found a hit for F    { 64, 230, 240}
+*******************now processing N
+We found a hit for N    { 65, 310, 320}
+*******************now processing Unlock0
+We found a hit for 0    { 66, 400, 410}
+*******************now processing K
+We found a miss for K   { 67, 410, 510}
+*******************now processing H
+We found a hit for H    { 68, 410, 420}
+*******************now processing G
+We found a hit for G    { 69, 410, 420}
+*******************now processing F
+We found a hit for F    { 70, 410, 420}
+*******************now processing G
+We found a hit for G    { 71, 420, 430}
+*******************now processing J
+We found a hit for J    { 72, 410, 420}
+*******************now processing D
+We found a hit for D    { 73, 410, 420}
+*******************now processing H
+We found a hit for H    { 74, 420, 430}
+*******************now processing R
+We found a miss for R   { 75, 410, 510}
+*******************now processing E
+We found a hit for E    { 76, 410, 420}
+*******************now processing F
+We found a hit for F    { 77, 420, 430}
+*******************now processing C
+We found a hit for C    { 78, 410, 420}
+*******************now processing F
+We found a hit for F    { 79, 430, 440}
+*******************now processing E
+We found a hit for E    { 80, 420, 430}
+*******************now processing R
+We found a hit for R    { 81, 510, 520}
+finally the cache is filled with :
+Contents of the cache are: 
+G    { 71, 420, 430}
+H    { 74, 420, 430}
+F    { 79, 430, 440}
+D    { 73, 410, 420}
+0    { 66, 400, 410}
+C    { 78, 410, 420}
+J    { 72, 410, 420}
+B    { 63, 350, 360}
+A    { 61, 350, 360}
+I    { 49, 320, 330}
+E    { 80, 420, 430}
+N    { 65, 310, 320}
+K    { 67, 410, 510}
+R    { 81, 510, 520}
+
+size of the L1cache is 14
+
+The WO total latency is : 520 cycles 
+The avg WO critical section latency is : 300 which is derived from 300 / 1
