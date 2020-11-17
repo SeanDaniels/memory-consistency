@@ -7,6 +7,7 @@
 #include <vector>
 #include <cstring>
 #include <map>
+#include <algorithm>
 /*Enumeration of model argument*/
 enum modelValue { SC, PC, WO, RC};
 
@@ -19,4 +20,10 @@ void wo_simulator(std::vector<std::string> argumentVector);
 void pc_simulator(std::vector<std::string> argumentVector);
 /*Simulator for sequential consistency model*/
 void sc_simulator(std::vector<std::string> argumentVector);
+/*Print instruction*/
+void print_instruction(std::string instructionString);
+/*Print instruction*/
+void print_cycle_vector(std::vector<int> cycleVector);
+/*Print instruction*/
+int check_cache(std::string thisMemoryLocation);
 #endif // __MAIN_H_
