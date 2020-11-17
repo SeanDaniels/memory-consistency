@@ -18,9 +18,9 @@ Memory Consistency Model Simulator
     Store C
     Load D
 …
-
+    
 # Assumptions
- assume that you have an infinite cache size with hit latency of 10 cycles. Meanwhile, any access that isn’t a hit in the cache will incur 100 cycles. Also, assume that lock consists of a load and store, i.e., atomic read-modify-write. Meanwhile, unlock is a store instruction. However, lock and unlock are correctly identified by the compiler as acquire and release, respectively, and hence exposed to the hardware as such, if needed and supported. Lock and unlock takes ten cycles if the lock variable is a cache hit, and 100 cycles otherwise. The hardware can issue one instruction at any time, but can complete several ones in the same cycle, i.e., several instructions can have the same finish time, but only one instruction can start at any cycle. For data dependency, for the sake of simplicity, we assume any load/store operations using the same variable are dependent and hence need to be ordered strictly.
+ Assume that you have an infinite cache size with hit latency of 10 cycles. Meanwhile, any access that isn’t a hit in the cache will incur 100 cycles. Also, assume that lock consists of a load and store, i.e., atomic read-modify-write. Meanwhile, unlock is a store instruction. However, lock and unlock are correctly identified by the compiler as acquire and release, respectively, and hence exposed to the hardware as such, if needed and supported. Lock and unlock takes ten cycles if the lock variable is a cache hit, and 100 cycles otherwise. The hardware can issue one instruction at any time, but can complete several ones in the same cycle, i.e., several instructions can have the same finish time, but only one instruction can start at any cycle. For data dependency, for the sake of simplicity, we assume any load/store operations using the same variable are dependent and hence need to be ordered strictly.
 
 # Additional Examples
  For all the cases of PC, SC, WO and RC- above we said that the hardware can issue one instruction at any time, but can complete several ones in the same cycle, i.e., several instructions can have the same finish time, but only one instruction can start at any cycle- implement this as “in any cycle only 1 instruction can be fetched but it can be placed in an issue queue of infinite size till it can get issued and you can issue multiple instructions in the same cycle and multiple instructions can complete/retire in the same cycle.”
@@ -74,7 +74,7 @@ Memory Consistency Model Simulator
 
 # PC model
  For processor consistency (PC) model, assume a store/write buffer with size of 16 entries. Only when an entry is evicted, it becomes globally visible. In the PC model, we assume that stores take one cycle to be inserted to the store buffer, and evictions from the store buffer happens only when it is full. For simplicity, when the buffer is full, inserting an entry to the front will evict the last entry. Assume the eviction happens in the background and we only incur the one cycle latency to insert the entry. 
- //Specific assumptions for PC (as posted in piazza)
+## Specific assumptions for PC (as posted in piazza)
  1. For any store, the retire-time is 1 clock cycle into the store buffer from the time it is issued or executed.
  a. check if the store buffer is full; 
  if (SB_full) {
@@ -164,22 +164,20 @@ Memory Consistency Model Simulator
  
  The first number (235) is the number of cycles to finish executing all instructions in the application. The second number is the total number of cycles inside the critical sections averaged over the total number of critical sections. Note that for the second number, approximate it to the closest integer value.
 
-# Deliverables
- Your code along with a Makefile to compile it and make sure it works on grendel.
- The contents should be all *cpp, *h files, Makefile that creates a final executable named sim_program2
- Do not include the test files given to you and any object files; we will compile your code and create a new executable anyway.  
- sim_program2 should accept two arguments for being able to run.
- ./sim_program2 <mem_consistency_model> <input_trace_file>
- where mem_consistency_model is SC, PC, WO or RC keywords and input_trace_file is one of the test files provided.
- A report labelled- report.pdf
- These things should all be present inside a folder labelled “program2” (including the report) and submit a compressed version of this using
- tar czf program2.tgz program2
- 
 
+# Deliverables
+ - Your code along with a Makefile to compile it and make sure it works on grendel.
+   The contents should be all *cpp, *h files, Makefile that creates a final executable named sim_program2
+ - Do not include the test files given to you and any object files; we will compile your code and create a new executable anyway.
+ - 'sim_program2' should accept two arguments for being able to run.
+   ./sim_program2 <mem_consistency_model> <input_trace_file>
+   where mem_consistency_model is SC, PC, WO or RC keywords and input_trace_file is one of the test files provided.
+ - A report labelled- report.pdf
+ - These things should all be present inside a folder labelled “program2” (including the report) and submit a compressed version of this using tar czf program2.tgz program2
 # Grade Breakdown
- Reasonable coding efforts 30%
- Accuracy of the output 60% (there will be 3 test files provided and 2 mysterious test not provided, each for 10%)
- Report 20%
+ - Reasonable coding efforts 30%
+ - Accuracy of the output 60% (there will be 3 test files provided and 2 mysterious test not provided, each for 10%)
+ - Report 20%
 
 # Report Structure
  Compare and discuss the execution time for each of the traces between the following consistency models: 
