@@ -21,3 +21,10 @@
 - Store A
 - Load A
 - No dependency
+* PC
+** Ordered
+- Load/Load
+- Store/Store
+- Load/Store
+** Relaxed
+- Store/Load
