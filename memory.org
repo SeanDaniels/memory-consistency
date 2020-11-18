@@ -1,0 +1,47 @@
+#+TITLE: Memory
+* Sequential Consistency (SC)
+- If sc is used, what is the expected outcome?
+- Barrier between all memory instructions
+- Processor enforces ordering between data dependencies
+* Can we do better than SC?
+- Most architectures support explicit ordering instructions that indicate when ordering is a must. for instance, in x86, 'sfence' and 'mfence' instructions force ordering between previous and later instructions
+- Can we rely on such instruction's to force ordering when needed? At least not all memory operations need to be ordered but only those require that.
+* Processor Consistency (PC)
+- Determine when store buffer is flushed
+- Loads are fenced
+- Data deps enforce order without fencing
+- Fence between stores
+- Fence between load store
+- No fence between store load
+- example:
+  | Fence Insertion |
+  |-----------------|
+  | lock1           |
+  | *FENCE*         |
+  | load A          |
+  | *FENCE*         |
+  | store B         |
+  | *FENCE*         |
+  | unlock1         |
+  | load C          |
+  | store C         |
+  | *FENCE*         |
+  | store D         |
+  | *FENCE*         |
+  | lock2           |
+  | *FENCE*         |
+  | load  E         |
+  | *FENCE*         |
+  | store F         |
+  | *FENCE*         |
+-
+* Homework questions
+** Sequential Consistency
+- Fence after all
+* Weak Ordering (WO)
+- WO is based on the assumption that programmers expose to the hardware where the synchronization points are, and where ordering is needed
+- WO simply enforces ordering only at synchronization points
+- Fence before and after lock
+* Release Consistency
+- Fence after acquire
+- Fence before release
