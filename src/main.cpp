@@ -8,7 +8,9 @@ using namespace std;
 std::string inputFileDir = "../trace_files/";
 std::string spaceString = " ";
 std::map<std::string, modelValue> modelSwitch;
+/* Contains clock info for instructions */
 std::vector<int> cycleVector (3, 0);
+/*  */
 std::vector<vector<int>> cycleVectorList;
 std::vector<char> cache;
 

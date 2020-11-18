@@ -8,3 +8,16 @@
 - Hit latency = 10
 - Miss latency = 100
 - One instruction start per cycle
+* Dependencies
+** Load/Store
+- Load A
+- Store A
+- Must wait until A has been loaded before storing to A
+** Load/Load
+- Load A
+- Load A
+- No dependency
+** Store/Load
+- Store A
+- Load A
+- No dependency
