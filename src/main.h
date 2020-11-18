@@ -24,6 +24,8 @@ void sc_simulator(std::vector<std::string> argumentVector);
 void print_instruction(std::string instructionString);
 /*Print instruction*/
 void print_cycle_vector(std::vector<int> cycleVector);
-/*Print instruction*/
+/*Check cache*/
 int check_cache(std::string thisMemoryLocation);
+/*print cache*/
+void print_cache(std::vector<char> thisCache);
 #endif // __MAIN_H_
