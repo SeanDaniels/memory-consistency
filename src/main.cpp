@@ -2,6 +2,7 @@
 
 #define MODEL 2
 #define INPUT 1
+#define INPUT_FILE_DIR "../trace_files/"
 #define DBG
 
 using std::cout;
@@ -21,7 +22,7 @@ std::vector<char> cache;
 /* Parse file */
 std::vector<string> parse_file(std::string fileName){
   std::vector<string> parsed_file_inputs;
-  std::string inputFile = inputFileDir + fileName;
+  std::string inputFile = INPUT_FILE_DIR + fileName;
   std::string fileLine, arg, firstLetter, lastLetter;
   ifstream infile(inputFile);
   size_t foundSpace, len;
@@ -119,6 +120,7 @@ void pc_simulator(std::vector<std::string> argumentVector){
   static int clockCycle = 0;
   int fetchCycle, issueCycle, retireCycle, cycleTime;
   std::vector<std::string> cacheVector;
+  std:vector<std::string> storeBuffer;
   std::vector<string>::iterator it = argumentVector.begin();
   std::vector<int> checkCycle;
   while(it!=argumentVector.end()){
@@ -126,22 +128,26 @@ void pc_simulator(std::vector<std::string> argumentVector){
     cycleTime = check_cache(*it);
     cycleVector.at(0) = clockCycle;
     if (cycleVectorList.size() > 0) {
-      if (*it->begin() == 'L') {
-        if (*(it - 1)->begin() == 'S') {
-#ifdef DBG
-          cout << " (found store/load order)";
-#endif
-          cycleVector.at(1) = cycleVectorList.back().at(1) + 1;
-        }
-        else {
-          checkCycle = cycleVectorList.back();
-          cycleVector.at(1) = checkCycle.at(2);
+      switch (*it->begin()){
+        case 'L':
+          if(*(it-1)->begin()=='S'){
+            #ifdef DBG
+            cout << " (store->load)";
+            #endif
+            cycleVector.at(1) = cycleVectorList.back().at(1);
+          }
+          else{
+            cycleVector.at(1) = cycleVectorList.back().at(2);
+          }
+          break;
+        case 'S':
+          //add to store buffer
+          cycleTime = 1;
+        default:
+            cycleVector.at(1) = cycleVectorList.back().at(2);
+          break;
         }
       }
-      else{
-        cycleVector.at(1) = cycleVectorList.back().at(2);
-      }
-    }
     else {
         cycleVector.at(1) = clockCycle;
     }
