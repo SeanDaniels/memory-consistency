@@ -1,0 +1,882 @@
+initally the cache is filled with :
+Contents of the cache are: 
+
+size of the L1cache is 0
+
+The PC total latency is : 0 cycles 
+*******************now processing W
+Added W to the Store Buffer without any eviction    { 0, 0, 1}
+*******************now processing L
+We found a miss for L   { 1, 1, 101}
+*******************now processing R
+We found a miss for R   { 2, 101, 201}
+*******************now processing B
+We found a miss for B   { 3, 201, 301}
+*******************now processing B
+We found a hit for B    { 4, 301, 311}
+*******************now processing W
+We found a miss for W   { 5, 311, 411}
+*******************now processing M
+Added M to the Store Buffer without any eviction    { 6, 411, 412}
+*******************now processing Q
+Added Q to the Store Buffer without any eviction    { 7, 412, 413}
+*******************now processing B
+We found a hit for B    { 8, 411, 421}
+*******************now processing H
+We found a miss for H   { 9, 421, 521}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 10, 521, 522}
+*******************now processing M
+We found a miss for M   { 11, 521, 621}
+*******************now processing D
+Added D to the Store Buffer without any eviction    { 12, 621, 622}
+*******************now processing A
+Added A to the Store Buffer without any eviction    { 13, 622, 623}
+*******************now processing R
+We found a hit for R    { 14, 621, 631}
+*******************now processing Z
+We found a miss for Z   { 15, 631, 731}
+*******************now processing O
+Added O to the Store Buffer without any eviction    { 16, 731, 732}
+*******************now processing D
+We found a miss for D   { 17, 731, 831}
+*******************now processing W
+Edited W in the Store Buffer as there was a hit; and    { 18, 831, 832}
+*******************now processing K
+Added K to the Store Buffer without any eviction    { 19, 832, 833}
+*******************now processing K
+Edited K in the Store Buffer as there was a hit; and    { 20, 833, 834}
+*******************now processing Y
+Added Y to the Store Buffer without any eviction    { 21, 834, 835}
+*******************now processing H
+We found a hit for H    { 22, 831, 841}
+*******************now processing W
+We found a hit for W    { 23, 841, 851}
+*******************now processing I
+Added I to the Store Buffer without any eviction    { 24, 851, 852}
+*******************now processing D
+We found a hit for D    { 25, 851, 861}
+*******************now processing D
+We found a hit for D    { 26, 861, 871}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 27, 871, 872}
+*******************now processing S
+Added S to the Store Buffer without any eviction    { 28, 872, 873}
+*******************now processing I
+We found a miss for I   { 29, 871, 971}
+*******************now processing Lock2
+We found a miss for 2   { 30, 971, 1071}
+*******************now processing D
+Edited D in the Store Buffer as there was a hit; and    { 31, 1071, 1072}
+*******************now processing R
+We found a hit for R    { 32, 1071, 1081}
+*******************now processing J
+We found a miss for J   { 33, 1081, 1181}
+*******************now processing D
+We found a hit for D    { 34, 1181, 1191}
+*******************now processing M
+Edited M in the Store Buffer as there was a hit; and    { 35, 1191, 1192}
+*******************now processing O
+Edited O in the Store Buffer as there was a hit; and    { 36, 1192, 1193}
+*******************now processing W
+Edited W in the Store Buffer as there was a hit; and    { 37, 1193, 1194}
+*******************now processing F
+We found a miss for F   { 38, 1191, 1291}
+*******************now processing M
+We found a hit for M    { 39, 1291, 1301}
+*******************now processing R
+Added R to the Store Buffer without any eviction    { 40, 1301, 1302}
+*******************now processing S
+Edited S in the Store Buffer as there was a hit; and    { 41, 1302, 1303}
+*******************now processing J
+We found a hit for J    { 42, 1301, 1311}
+*******************now processing R
+We found a hit for R    { 43, 1311, 1321}
+*******************now processing Y
+Edited Y in the Store Buffer as there was a hit; and    { 44, 1321, 1322}
+*******************now processing B
+We found a hit for B    { 45, 1321, 1331}
+*******************now processing L
+We found a hit for L    { 46, 1331, 1341}
+*******************now processing D
+We found a hit for D    { 47, 1341, 1351}
+*******************now processing Y
+We found a miss for Y   { 48, 1351, 1451}
+*******************now processing B
+Added B to the Store Buffer without any eviction    { 49, 1451, 1452}
+*******************now processing E
+Added E to the Store Buffer without any eviction    { 50, 1452, 1453}
+*******************now processing F
+We found a hit for F    { 51, 1451, 1461}
+*******************now processing S
+Edited S in the Store Buffer as there was a hit; and    { 52, 1461, 1462}
+*******************now processing B
+We found a hit for B    { 53, 1461, 1471}
+*******************now processing A
+We found a miss for A   { 54, 1471, 1571}
+*******************now processing R
+We found a hit for R    { 55, 1571, 1581}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 56, 1581, 1582}
+*******************now processing B
+We found a hit for B    { 57, 1581, 1591}
+*******************now processing A
+Edited A in the Store Buffer as there was a hit; and    { 58, 1591, 1592}
+*******************now processing Y
+Edited Y in the Store Buffer as there was a hit; and    { 59, 1592, 1593}
+*******************now processing N
+We found a miss for N   { 60, 1591, 1691}
+*******************now processing E
+Edited E in the Store Buffer as there was a hit; and    { 61, 1691, 1692}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 62, 1692, 1693}
+*******************now processing Y
+We found a hit for Y    { 63, 1691, 1701}
+*******************now processing D
+Edited D in the Store Buffer as there was a hit; and    { 64, 1701, 1702}
+*******************now processing Y
+Edited Y in the Store Buffer as there was a hit; and    { 65, 1702, 1703}
+*******************now processing G
+Added G to the Store Buffer without any eviction    { 66, 1703, 1704}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 67, 1704, 1705}
+*******************now processing D
+We found a hit for D    { 68, 1701, 1711}
+*******************now processing Unlock2
+We found a hit for W    { 37, 1711, 1721}
+We found a hit for M    { 35, 1711, 1721}
+We found a hit for D    { 64, 1711, 1721}
+We found a hit for A    { 58, 1711, 1721}
+We found a hit for Y    { 65, 1711, 1721}
+We found a hit for I    { 24, 1711, 1721}
+We found a hit for R    { 40, 1711, 1721}
+We found a hit for B    { 49, 1711, 1721}
+We found a miss for Q   { 27, 1711, 1811}
+We found a miss for C   { 62, 1711, 1811}
+We found a miss for O   { 36, 1711, 1811}
+We found a miss for K   { 20, 1711, 1811}
+We found a miss for S   { 52, 1711, 1811}
+We found a miss for E   { 61, 1711, 1811}
+We found a miss for G   { 67, 1711, 1811}
+We found a hit for 2    { 69, 1811, 1821}
+*******************now processing X
+We found a miss for X   { 70, 1711, 1811}
+*******************now processing X
+Added X to the Store Buffer without any eviction    { 71, 1821, 1822}
+*******************now processing Lock15
+We found a miss for 15   { 72, 1822, 1922}
+*******************now processing K
+We found a hit for K    { 73, 1922, 1932}
+*******************now processing L
+We found a hit for L    { 74, 1932, 1942}
+*******************now processing O
+Added O to the Store Buffer without any eviction    { 75, 1942, 1943}
+*******************now processing R
+We found a hit for R    { 76, 1942, 1952}
+*******************now processing K
+Added K to the Store Buffer without any eviction    { 77, 1952, 1953}
+*******************now processing E
+Added E to the Store Buffer without any eviction    { 78, 1953, 1954}
+*******************now processing L
+We found a hit for L    { 79, 1952, 1962}
+*******************now processing L
+We found a hit for L    { 80, 1962, 1972}
+*******************now processing N
+We found a hit for N    { 81, 1972, 1982}
+*******************now processing E
+We found a hit for E    { 82, 1982, 1992}
+*******************now processing M
+Added M to the Store Buffer without any eviction    { 83, 1992, 1993}
+*******************now processing P
+We found a miss for P   { 84, 1992, 2092}
+*******************now processing A
+Added A to the Store Buffer without any eviction    { 85, 2092, 2093}
+*******************now processing P
+We found a hit for P    { 86, 2092, 2102}
+*******************now processing M
+We found a hit for M    { 87, 2102, 2112}
+*******************now processing Q
+Added Q to the Store Buffer without any eviction    { 88, 2112, 2113}
+*******************now processing F
+We found a hit for F    { 89, 2112, 2122}
+*******************now processing W
+Added W to the Store Buffer without any eviction    { 90, 2122, 2123}
+*******************now processing K
+Edited K in the Store Buffer as there was a hit; and    { 91, 2123, 2124}
+*******************now processing Q
+We found a hit for Q    { 92, 2122, 2132}
+*******************now processing H
+Added H to the Store Buffer without any eviction    { 93, 2132, 2133}
+*******************now processing O
+Edited O in the Store Buffer as there was a hit; and    { 94, 2133, 2134}
+*******************now processing P
+We found a hit for P    { 95, 2132, 2142}
+*******************now processing K
+Edited K in the Store Buffer as there was a hit; and    { 96, 2142, 2143}
+*******************now processing H
+We found a hit for H    { 97, 2142, 2152}
+*******************now processing M
+Edited M in the Store Buffer as there was a hit; and    { 98, 2152, 2153}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 99, 2153, 2154}
+*******************now processing O
+Edited O in the Store Buffer as there was a hit; and    { 100, 2154, 2155}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 101, 2155, 2156}
+*******************now processing M
+We found a hit for M    { 102, 2152, 2162}
+*******************now processing H
+Edited H in the Store Buffer as there was a hit; and    { 103, 2162, 2163}
+*******************now processing N
+We found a hit for N    { 104, 2162, 2172}
+*******************now processing W
+Edited W in the Store Buffer as there was a hit; and    { 105, 2172, 2173}
+*******************now processing N
+We found a hit for N    { 106, 2172, 2182}
+*******************now processing H
+We found a hit for H    { 107, 2182, 2192}
+*******************now processing K
+We found a hit for K    { 108, 2192, 2202}
+*******************now processing U
+Added U to the Store Buffer without any eviction    { 109, 2202, 2203}
+*******************now processing E
+Edited E in the Store Buffer as there was a hit; and    { 110, 2203, 2204}
+*******************now processing W
+Edited W in the Store Buffer as there was a hit; and    { 111, 2204, 2205}
+*******************now processing K
+Edited K in the Store Buffer as there was a hit; and    { 112, 2205, 2206}
+*******************now processing Unlock15
+We found a hit for X    { 71, 2206, 2216}
+We found a hit for O    { 100, 2206, 2216}
+We found a hit for K    { 112, 2206, 2216}
+We found a hit for E    { 110, 2206, 2216}
+We found a hit for M    { 98, 2206, 2216}
+We found a hit for A    { 85, 2206, 2216}
+We found a hit for Q    { 101, 2206, 2216}
+We found a hit for W    { 111, 2206, 2216}
+We found a hit for H    { 103, 2206, 2216}
+We found a hit for C    { 99, 2206, 2216}
+We found a miss for U   { 109, 2206, 2306}
+We found a hit for 15    { 113, 2306, 2316}
+*******************now processing S
+Added S to the Store Buffer without any eviction    { 114, 2316, 2317}
+*******************now processing Q
+Added Q to the Store Buffer without any eviction    { 115, 2317, 2318}
+*******************now processing M
+Added M to the Store Buffer without any eviction    { 116, 2318, 2319}
+*******************now processing G
+Added G to the Store Buffer without any eviction    { 117, 2319, 2320}
+*******************now processing B
+We found a hit for B    { 118, 2202, 2212}
+*******************now processing B
+We found a hit for B    { 119, 2212, 2222}
+*******************now processing U
+Added U to the Store Buffer without any eviction    { 120, 2320, 2321}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 121, 2321, 2322}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 122, 2322, 2323}
+*******************now processing Lock11
+We found a miss for 11   { 123, 2323, 2423}
+*******************now processing J
+Added J to the Store Buffer without any eviction    { 124, 2423, 2424}
+*******************now processing J
+We found a hit for J    { 125, 2423, 2433}
+*******************now processing I
+Added I to the Store Buffer without any eviction    { 126, 2433, 2434}
+*******************now processing V
+We found a miss for V   { 127, 2433, 2533}
+*******************now processing J
+We found a hit for J    { 128, 2533, 2543}
+*******************now processing S
+Edited S in the Store Buffer as there was a hit; and    { 129, 2543, 2544}
+*******************now processing W
+Added W to the Store Buffer without any eviction    { 130, 2544, 2545}
+*******************now processing M
+Edited M in the Store Buffer as there was a hit; and    { 131, 2545, 2546}
+*******************now processing D
+We found a hit for D    { 132, 2543, 2553}
+*******************now processing S
+We found a hit for S    { 133, 2553, 2563}
+*******************now processing K
+We found a hit for K    { 134, 2563, 2573}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 135, 2573, 2574}
+*******************now processing T
+We found a miss for T   { 136, 2573, 2673}
+*******************now processing B
+We found a hit for B    { 137, 2673, 2683}
+*******************now processing K
+Added K to the Store Buffer without any eviction    { 138, 2683, 2684}
+*******************now processing X
+Added X to the Store Buffer without any eviction    { 139, 2684, 2685}
+*******************now processing I
+Edited I in the Store Buffer as there was a hit; and    { 140, 2685, 2686}
+*******************now processing X
+We found a hit for X    { 141, 2683, 2693}
+*******************now processing M
+Edited M in the Store Buffer as there was a hit; and    { 142, 2693, 2694}
+*******************now processing X
+We found a hit for X    { 143, 2693, 2703}
+*******************now processing V
+Added V to the Store Buffer without any eviction    { 144, 2703, 2704}
+*******************now processing T
+We found a hit for T    { 145, 2703, 2713}
+*******************now processing R
+We found a hit for R    { 146, 2713, 2723}
+*******************now processing R
+We found a hit for R    { 147, 2723, 2733}
+*******************now processing V
+We found a hit for V    { 148, 2733, 2743}
+*******************now processing B
+Added B to the Store Buffer without any eviction    { 149, 2743, 2744}
+*******************now processing L
+We found a hit for L    { 150, 2743, 2753}
+*******************now processing J
+We found a hit for J    { 151, 2753, 2763}
+*******************now processing P
+We found a hit for P    { 152, 2763, 2773}
+*******************now processing B
+We found a hit for B    { 153, 2773, 2783}
+*******************now processing T
+Added T to the Store Buffer without any eviction    { 154, 2783, 2784}
+*******************now processing N
+We found a hit for N    { 155, 2783, 2793}
+*******************now processing S
+Edited S in the Store Buffer as there was a hit; and    { 156, 2793, 2794}
+*******************now processing N
+We found a hit for N    { 157, 2793, 2803}
+*******************now processing T
+We found a hit for T    { 158, 2803, 2813}
+*******************now processing F
+We found a hit for F    { 159, 2813, 2823}
+*******************now processing W
+Edited W in the Store Buffer as there was a hit; and    { 160, 2823, 2824}
+*******************now processing Z
+We found a hit for Z    { 161, 2823, 2833}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 162, 2833, 2834}
+*******************now processing F
+Added F to the Store Buffer without any eviction    { 163, 2834, 2835}
+*******************now processing Unlock11
+We found a hit for S    { 156, 2835, 2845}
+We found a hit for Q    { 162, 2835, 2845}
+We found a hit for M    { 142, 2835, 2845}
+We found a hit for G    { 117, 2835, 2845}
+We found a hit for U    { 120, 2835, 2845}
+We found a hit for C    { 122, 2835, 2845}
+We found a hit for J    { 124, 2835, 2845}
+We found a hit for I    { 140, 2835, 2845}
+We found a hit for W    { 160, 2835, 2845}
+We found a hit for K    { 138, 2835, 2845}
+We found a hit for X    { 139, 2835, 2845}
+We found a hit for V    { 144, 2835, 2845}
+We found a hit for B    { 149, 2835, 2845}
+We found a hit for T    { 154, 2835, 2845}
+We found a hit for F    { 163, 2835, 2845}
+We found a hit for 11    { 164, 2845, 2855}
+*******************now processing J
+We found a hit for J    { 165, 2845, 2855}
+*******************now processing M
+Added M to the Store Buffer without any eviction    { 166, 2855, 2856}
+*******************now processing A
+Added A to the Store Buffer without any eviction    { 167, 2856, 2857}
+*******************now processing Lock5
+We found a miss for 5   { 168, 2857, 2957}
+*******************now processing A
+We found a hit for A    { 169, 2957, 2967}
+*******************now processing D
+We found a hit for D    { 170, 2967, 2977}
+*******************now processing R
+We found a hit for R    { 171, 2977, 2987}
+*******************now processing R
+We found a hit for R    { 172, 2987, 2997}
+*******************now processing A
+Edited A in the Store Buffer as there was a hit; and    { 173, 2997, 2998}
+*******************now processing W
+Added W to the Store Buffer without any eviction    { 174, 2998, 2999}
+*******************now processing S
+Added S to the Store Buffer without any eviction    { 175, 2999, 3000}
+*******************now processing O
+Added O to the Store Buffer without any eviction    { 176, 3000, 3001}
+*******************now processing F
+We found a hit for F    { 177, 2997, 3007}
+*******************now processing W
+We found a hit for W    { 178, 3007, 3017}
+*******************now processing S
+Edited S in the Store Buffer as there was a hit; and    { 179, 3017, 3018}
+*******************now processing B
+We found a hit for B    { 180, 3017, 3027}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 181, 3027, 3028}
+*******************now processing N
+We found a hit for N    { 182, 3027, 3037}
+*******************now processing S
+We found a hit for S    { 183, 3037, 3047}
+*******************now processing U
+We found a hit for U    { 184, 3047, 3057}
+*******************now processing V
+We found a hit for V    { 185, 3057, 3067}
+*******************now processing Q
+Added Q to the Store Buffer without any eviction    { 186, 3067, 3068}
+*******************now processing H
+We found a hit for H    { 187, 3067, 3077}
+*******************now processing U
+Added U to the Store Buffer without any eviction    { 188, 3077, 3078}
+*******************now processing F
+We found a hit for F    { 189, 3077, 3087}
+*******************now processing F
+We found a hit for F    { 190, 3087, 3097}
+*******************now processing B
+We found a hit for B    { 191, 3097, 3107}
+*******************now processing S
+Edited S in the Store Buffer as there was a hit; and    { 192, 3107, 3108}
+*******************now processing F
+Added F to the Store Buffer without any eviction    { 193, 3108, 3109}
+*******************now processing A
+We found a hit for A    { 194, 3107, 3117}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 195, 3117, 3118}
+*******************now processing X
+We found a hit for X    { 196, 3117, 3127}
+*******************now processing W
+Edited W in the Store Buffer as there was a hit; and    { 197, 3127, 3128}
+*******************now processing A
+Edited A in the Store Buffer as there was a hit; and    { 198, 3128, 3129}
+*******************now processing P
+We found a hit for P    { 199, 3127, 3137}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 200, 3137, 3138}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 201, 3138, 3139}
+*******************now processing A
+Edited A in the Store Buffer as there was a hit; and    { 202, 3139, 3140}
+*******************now processing P
+Added P to the Store Buffer without any eviction    { 203, 3140, 3141}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 204, 3141, 3142}
+*******************now processing E
+Added E to the Store Buffer without any eviction    { 205, 3142, 3143}
+*******************now processing H
+We found a hit for H    { 206, 3137, 3147}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 207, 3147, 3148}
+*******************now processing C
+We found a hit for C    { 208, 3147, 3157}
+*******************now processing Unlock5
+We found a hit for M    { 166, 3157, 3167}
+We found a hit for A    { 202, 3157, 3167}
+We found a hit for W    { 197, 3157, 3167}
+We found a hit for S    { 192, 3157, 3167}
+We found a hit for O    { 176, 3157, 3167}
+We found a hit for C    { 207, 3157, 3167}
+We found a hit for Q    { 200, 3157, 3167}
+We found a hit for U    { 188, 3157, 3167}
+We found a hit for F    { 193, 3157, 3167}
+We found a hit for P    { 203, 3157, 3167}
+We found a hit for E    { 205, 3157, 3167}
+We found a hit for 5    { 209, 3167, 3177}
+*******************now processing Z
+We found a hit for Z    { 210, 3157, 3167}
+*******************now processing V
+We found a hit for V    { 211, 3167, 3177}
+*******************now processing F
+We found a hit for F    { 212, 3177, 3187}
+*******************now processing Lock17
+We found a miss for 17   { 213, 3187, 3287}
+*******************now processing K
+We found a hit for K    { 214, 3287, 3297}
+*******************now processing M
+Added M to the Store Buffer without any eviction    { 215, 3297, 3298}
+*******************now processing L
+We found a hit for L    { 216, 3297, 3307}
+*******************now processing N
+We found a hit for N    { 217, 3307, 3317}
+*******************now processing K
+Added K to the Store Buffer without any eviction    { 218, 3317, 3318}
+*******************now processing O
+Added O to the Store Buffer without any eviction    { 219, 3318, 3319}
+*******************now processing Z
+We found a hit for Z    { 220, 3317, 3327}
+*******************now processing J
+We found a hit for J    { 221, 3327, 3337}
+*******************now processing K
+Edited K in the Store Buffer as there was a hit; and    { 222, 3337, 3338}
+*******************now processing O
+We found a hit for O    { 223, 3337, 3347}
+*******************now processing P
+We found a hit for P    { 224, 3347, 3357}
+*******************now processing Q
+Added Q to the Store Buffer without any eviction    { 225, 3357, 3358}
+*******************now processing P
+We found a hit for P    { 226, 3357, 3367}
+*******************now processing X
+We found a hit for X    { 227, 3367, 3377}
+*******************now processing P
+Added P to the Store Buffer without any eviction    { 228, 3377, 3378}
+*******************now processing R
+Added R to the Store Buffer without any eviction    { 229, 3378, 3379}
+*******************now processing J
+We found a hit for J    { 230, 3377, 3387}
+*******************now processing X
+We found a hit for X    { 231, 3387, 3397}
+*******************now processing K
+Edited K in the Store Buffer as there was a hit; and    { 232, 3397, 3398}
+*******************now processing R
+We found a hit for R    { 233, 3397, 3407}
+*******************now processing I
+Added I to the Store Buffer without any eviction    { 234, 3407, 3408}
+*******************now processing T
+We found a hit for T    { 235, 3407, 3417}
+*******************now processing Z
+We found a hit for Z    { 236, 3417, 3427}
+*******************now processing Y
+Added Y to the Store Buffer without any eviction    { 237, 3427, 3428}
+*******************now processing I
+We found a hit for I    { 238, 3427, 3437}
+*******************now processing X
+Added X to the Store Buffer without any eviction    { 239, 3437, 3438}
+*******************now processing A
+Added A to the Store Buffer without any eviction    { 240, 3438, 3439}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 241, 3439, 3440}
+*******************now processing B
+We found a hit for B    { 242, 3437, 3447}
+*******************now processing X
+We found a hit for X    { 243, 3447, 3457}
+*******************now processing H
+Added H to the Store Buffer without any eviction    { 244, 3457, 3458}
+*******************now processing H
+We found a hit for H    { 245, 3457, 3467}
+*******************now processing K
+Edited K in the Store Buffer as there was a hit; and    { 246, 3467, 3468}
+*******************now processing I
+Edited I in the Store Buffer as there was a hit; and    { 247, 3468, 3469}
+*******************now processing H
+We found a hit for H    { 248, 3467, 3477}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 249, 3477, 3478}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 250, 3478, 3479}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 251, 3479, 3480}
+*******************now processing O
+Edited O in the Store Buffer as there was a hit; and    { 252, 3480, 3481}
+*******************now processing C
+We found a hit for C    { 253, 3477, 3487}
+*******************now processing Unlock17
+We found a hit for M    { 215, 3487, 3497}
+We found a hit for K    { 246, 3487, 3497}
+We found a hit for O    { 252, 3487, 3497}
+We found a hit for Q    { 250, 3487, 3497}
+We found a hit for P    { 228, 3487, 3497}
+We found a hit for R    { 229, 3487, 3497}
+We found a hit for I    { 247, 3487, 3497}
+We found a hit for Y    { 237, 3487, 3497}
+We found a hit for X    { 239, 3487, 3497}
+We found a hit for A    { 240, 3487, 3497}
+We found a hit for C    { 251, 3487, 3497}
+We found a hit for H    { 244, 3487, 3497}
+We found a hit for 17    { 254, 3497, 3507}
+*******************now processing N
+We found a hit for N    { 255, 3487, 3497}
+*******************now processing D
+We found a hit for D    { 256, 3497, 3507}
+*******************now processing T
+We found a hit for T    { 257, 3507, 3517}
+*******************now processing O
+Added O to the Store Buffer without any eviction    { 258, 3517, 3518}
+*******************now processing M
+Added M to the Store Buffer without any eviction    { 259, 3518, 3519}
+*******************now processing F
+We found a hit for F    { 260, 3517, 3527}
+*******************now processing G
+Added G to the Store Buffer without any eviction    { 261, 3527, 3528}
+*******************now processing D
+We found a hit for D    { 262, 3527, 3537}
+*******************now processing Lock22
+We found a miss for 22   { 263, 3537, 3637}
+*******************now processing D
+Added D to the Store Buffer without any eviction    { 264, 3637, 3638}
+*******************now processing W
+Added W to the Store Buffer without any eviction    { 265, 3638, 3639}
+*******************now processing F
+We found a hit for F    { 266, 3637, 3647}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 267, 3647, 3648}
+*******************now processing D
+We found a hit for D    { 268, 3647, 3657}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 269, 3657, 3658}
+*******************now processing P
+We found a hit for P    { 270, 3657, 3667}
+*******************now processing X
+We found a hit for X    { 271, 3667, 3677}
+*******************now processing I
+Added I to the Store Buffer without any eviction    { 272, 3677, 3678}
+*******************now processing G
+We found a hit for G    { 273, 3677, 3687}
+*******************now processing Q
+Added Q to the Store Buffer without any eviction    { 274, 3687, 3688}
+*******************now processing V
+We found a hit for V    { 275, 3687, 3697}
+*******************now processing K
+Added K to the Store Buffer without any eviction    { 276, 3697, 3698}
+*******************now processing U
+Added U to the Store Buffer without any eviction    { 277, 3698, 3699}
+*******************now processing Q
+We found a hit for Q    { 278, 3697, 3707}
+*******************now processing Y
+Added Y to the Store Buffer without any eviction    { 279, 3707, 3708}
+*******************now processing T
+We found a hit for T    { 280, 3707, 3717}
+*******************now processing D
+We found a hit for D    { 281, 3717, 3727}
+*******************now processing L
+We found a hit for L    { 282, 3727, 3737}
+*******************now processing Y
+We found a hit for Y    { 283, 3737, 3747}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 284, 3747, 3748}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 285, 3748, 3749}
+*******************now processing D
+We found a hit for D    { 286, 3747, 3757}
+*******************now processing E
+Added E to the Store Buffer without any eviction    { 287, 3757, 3758}
+*******************now processing C
+We found a hit for C    { 288, 3757, 3767}
+*******************now processing W
+Edited W in the Store Buffer as there was a hit; and    { 289, 3767, 3768}
+*******************now processing H
+We found a hit for H    { 290, 3767, 3777}
+*******************now processing T
+We found a hit for T    { 291, 3777, 3787}
+*******************now processing A
+Added A to the Store Buffer without any eviction    { 292, 3787, 3788}
+*******************now processing W
+We found a hit for W    { 293, 3787, 3797}
+*******************now processing C
+Edited C in the Store Buffer as there was a hit; and    { 294, 3797, 3798}
+*******************now processing I
+Edited I in the Store Buffer as there was a hit; and    { 295, 3798, 3799}
+*******************now processing O
+Edited O in the Store Buffer as there was a hit; and    { 296, 3799, 3800}
+*******************now processing H
+We found a hit for H    { 297, 3797, 3807}
+*******************now processing C
+We found a hit for C    { 298, 3807, 3817}
+*******************now processing O
+Edited O in the Store Buffer as there was a hit; and    { 299, 3817, 3818}
+*******************now processing R
+We found a hit for R    { 300, 3817, 3827}
+*******************now processing D
+We found a hit for D    { 301, 3827, 3837}
+*******************now processing T
+We found a hit for T    { 302, 3837, 3847}
+*******************now processing O
+We found a hit for O    { 303, 3847, 3857}
+*******************now processing Unlock22
+We found a hit for O    { 299, 3857, 3867}
+We found a hit for M    { 259, 3857, 3867}
+We found a hit for G    { 285, 3857, 3867}
+We found a hit for D    { 264, 3857, 3867}
+We found a hit for W    { 289, 3857, 3867}
+We found a hit for C    { 294, 3857, 3867}
+We found a hit for I    { 295, 3857, 3867}
+We found a hit for Q    { 274, 3857, 3867}
+We found a hit for K    { 276, 3857, 3867}
+We found a hit for U    { 277, 3857, 3867}
+We found a hit for Y    { 279, 3857, 3867}
+We found a hit for E    { 287, 3857, 3867}
+We found a hit for A    { 292, 3857, 3867}
+We found a hit for 22    { 304, 3867, 3877}
+*******************now processing Lock10
+We found a miss for 10   { 305, 3877, 3977}
+*******************now processing V
+Added V to the Store Buffer without any eviction    { 306, 3977, 3978}
+*******************now processing W
+Added W to the Store Buffer without any eviction    { 307, 3978, 3979}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 308, 3979, 3980}
+*******************now processing S
+Added S to the Store Buffer without any eviction    { 309, 3980, 3981}
+*******************now processing V
+We found a hit for V    { 310, 3977, 3987}
+*******************now processing G
+Added G to the Store Buffer without any eviction    { 311, 3987, 3988}
+*******************now processing S
+Edited S in the Store Buffer as there was a hit; and    { 312, 3988, 3989}
+*******************now processing P
+We found a hit for P    { 313, 3987, 3997}
+*******************now processing Q
+Added Q to the Store Buffer without any eviction    { 314, 3997, 3998}
+*******************now processing G
+We found a hit for G    { 315, 3997, 4007}
+*******************now processing O
+Added O to the Store Buffer without any eviction    { 316, 4007, 4008}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 317, 4008, 4009}
+*******************now processing M
+Added M to the Store Buffer without any eviction    { 318, 4009, 4010}
+*******************now processing S
+Edited S in the Store Buffer as there was a hit; and    { 319, 4010, 4011}
+*******************now processing O
+We found a hit for O    { 320, 4007, 4017}
+*******************now processing B
+Added B to the Store Buffer without any eviction    { 321, 4017, 4018}
+*******************now processing O
+Edited O in the Store Buffer as there was a hit; and    { 322, 4018, 4019}
+*******************now processing A
+Added A to the Store Buffer without any eviction    { 323, 4019, 4020}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 324, 4020, 4021}
+*******************now processing B
+We found a hit for B    { 325, 4017, 4027}
+*******************now processing U
+We found a hit for U    { 326, 4027, 4037}
+*******************now processing W
+Edited W in the Store Buffer as there was a hit; and    { 327, 4037, 4038}
+*******************now processing N
+We found a hit for N    { 328, 4037, 4047}
+*******************now processing N
+We found a hit for N    { 329, 4047, 4057}
+*******************now processing U
+Added U to the Store Buffer without any eviction    { 330, 4057, 4058}
+*******************now processing Y
+Added Y to the Store Buffer without any eviction    { 331, 4058, 4059}
+*******************now processing Q
+Edited Q in the Store Buffer as there was a hit; and    { 332, 4059, 4060}
+*******************now processing X
+We found a hit for X    { 333, 4057, 4067}
+*******************now processing N
+We found a hit for N    { 334, 4067, 4077}
+*******************now processing Y
+We found a hit for Y    { 335, 4077, 4087}
+*******************now processing Z
+We found a hit for Z    { 336, 4087, 4097}
+*******************now processing L
+We found a hit for L    { 337, 4097, 4107}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 338, 4107, 4108}
+*******************now processing D
+We found a hit for D    { 339, 4107, 4117}
+*******************now processing Z
+Added Z to the Store Buffer without any eviction    { 340, 4117, 4118}
+*******************now processing G
+Edited G in the Store Buffer as there was a hit; and    { 341, 4118, 4119}
+*******************now processing W
+Edited W in the Store Buffer as there was a hit; and    { 342, 4119, 4120}
+*******************now processing P
+We found a hit for P    { 343, 4117, 4127}
+*******************now processing B
+We found a hit for B    { 344, 4127, 4137}
+*******************now processing G
+We found a hit for G    { 345, 4137, 4147}
+*******************now processing Unlock10
+We found a hit for V    { 306, 4147, 4157}
+We found a hit for W    { 342, 4147, 4157}
+We found a hit for C    { 308, 4147, 4157}
+We found a hit for S    { 319, 4147, 4157}
+We found a hit for G    { 341, 4147, 4157}
+We found a hit for Q    { 332, 4147, 4157}
+We found a hit for O    { 322, 4147, 4157}
+We found a hit for M    { 318, 4147, 4157}
+We found a hit for B    { 321, 4147, 4157}
+We found a hit for A    { 323, 4147, 4157}
+We found a hit for U    { 330, 4147, 4157}
+We found a hit for Y    { 331, 4147, 4157}
+We found a hit for Z    { 340, 4147, 4157}
+We found a hit for 10    { 346, 4157, 4167}
+*******************now processing R
+We found a hit for R    { 347, 4147, 4157}
+*******************now processing W
+Added W to the Store Buffer without any eviction    { 348, 4167, 4168}
+*******************now processing B
+We found a hit for B    { 349, 4157, 4167}
+*******************now processing L
+We found a hit for L    { 350, 4167, 4177}
+*******************now processing N
+We found a hit for N    { 351, 4177, 4187}
+*******************now processing W
+We found a hit for W    { 352, 4187, 4197}
+*******************now processing S
+Added S to the Store Buffer without any eviction    { 353, 4197, 4198}
+*******************now processing A
+Added A to the Store Buffer without any eviction    { 354, 4198, 4199}
+*******************now processing D
+We found a hit for D    { 355, 4197, 4207}
+*******************now processing E
+Added E to the Store Buffer without any eviction    { 356, 4207, 4208}
+*******************now processing S
+We found a hit for S    { 357, 4207, 4217}
+*******************now processing U
+We found a hit for U    { 358, 4217, 4227}
+*******************now processing G
+Added G to the Store Buffer without any eviction    { 359, 4227, 4228}
+*******************now processing U
+Added U to the Store Buffer without any eviction    { 360, 4228, 4229}
+*******************now processing U
+Edited U in the Store Buffer as there was a hit; and    { 361, 4229, 4230}
+*******************now processing U
+Edited U in the Store Buffer as there was a hit; and    { 362, 4230, 4231}
+*******************now processing M
+Added M to the Store Buffer without any eviction    { 363, 4231, 4232}
+*******************now processing O
+Added O to the Store Buffer without any eviction    { 364, 4232, 4233}
+*******************now processing Q
+Added Q to the Store Buffer without any eviction    { 365, 4233, 4234}
+*******************now processing C
+Added C to the Store Buffer without any eviction    { 366, 4234, 4235}
+*******************now processing M
+We found a hit for M    { 367, 4227, 4237}
+We found a hit for W    { 348, 4237, 4247}
+We found a hit for S    { 353, 4237, 4247}
+We found a hit for A    { 354, 4237, 4247}
+We found a hit for E    { 356, 4237, 4247}
+We found a hit for G    { 359, 4237, 4247}
+We found a hit for U    { 362, 4237, 4247}
+We found a hit for M    { 363, 4237, 4247}
+We found a hit for O    { 364, 4237, 4247}
+We found a hit for Q    { 365, 4237, 4247}
+We found a hit for C    { 366, 4237, 4247}
+finally the cache is filled with :
+Contents of the cache are: 
+L    { 350, 4167, 4177}
+R    { 347, 4147, 4157}
+B    { 349, 4157, 4167}
+W    { 348, 4237, 4247}
+H    { 297, 3797, 3807}
+M    { 363, 4237, 4247}
+Z    { 340, 4147, 4157}
+D    { 355, 4197, 4207}
+I    { 295, 3857, 3867}
+2    { 69, 1811, 1821}
+J    { 230, 3377, 3387}
+F    { 266, 3637, 3647}
+Y    { 331, 4147, 4157}
+A    { 354, 4237, 4247}
+N    { 351, 4177, 4187}
+Q    { 365, 4237, 4247}
+C    { 366, 4237, 4247}
+O    { 364, 4237, 4247}
+K    { 276, 3857, 3867}
+S    { 353, 4237, 4247}
+E    { 356, 4237, 4247}
+G    { 359, 4237, 4247}
+X    { 333, 4057, 4067}
+15    { 113, 2306, 2316}
+P    { 343, 4117, 4127}
+U    { 362, 4237, 4247}
+11    { 164, 2845, 2855}
+V    { 306, 4147, 4157}
+T    { 302, 3837, 3847}
+5    { 209, 3167, 3177}
+17    { 254, 3497, 3507}
+22    { 304, 3867, 3877}
+10    { 346, 4157, 4167}
+
+size of the L1cache is 33
+
+The PC total latency is : 4237 cycles 
+The avg PC critical section latency is : 449 which is derived from 3146 / 7

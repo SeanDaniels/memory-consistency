@@ -1,0 +1,141 @@
+Load G
+***FENCE***
+Load H
+***FENCE***
+Load F
+***FENCE***
+Load D
+***FENCE***
+Load G
+Lock0
+***FENCE***
+Load G
+***FENCE***
+Store C
+Load J
+***FENCE***
+Load B
+***FENCE***
+Store C
+Load H
+***FENCE***
+Store A
+Load J
+***FENCE***
+Load D
+***FENCE***
+Store G
+***FENCE***
+Store A
+Load G
+***FENCE***
+Load G
+***FENCE***
+Store C
+***FENCE***
+Store G
+Load B
+***FENCE***
+Store I
+Load H
+***FENCE***
+Load J
+***FENCE***
+Store C
+***FENCE***
+Store A
+***FENCE***
+Store C
+Load D
+***FENCE***
+Load G
+***FENCE***
+Load H
+***FENCE***
+Load F
+***FENCE***
+Load J
+***FENCE***
+Store C
+***FENCE***
+Store C
+***FENCE***
+Store I
+Load J
+***FENCE***
+Load H
+***FENCE***
+Load D
+***FENCE***
+Store G
+Load B
+***FENCE***
+Load H
+***FENCE***
+Load C
+***FENCE***
+Load J
+***FENCE***
+Load D
+***FENCE***
+Load B
+***FENCE***
+Load J
+***FENCE***
+Store E
+Load H
+***FENCE***
+Store I
+***FENCE***
+Store E
+Load F
+***FENCE***
+Store A
+Load C
+***FENCE***
+Load N
+***FENCE***
+Store G
+Load B
+***FENCE***
+Store A
+***FENCE***
+Store G
+Load D
+***FENCE***
+Store C
+***FENCE***
+Store A
+***FENCE***
+Store G
+Load B
+***FENCE***
+Load F
+***FENCE***
+Load N
+***FENCE***
+Unlock0
+***FENCE***
+Store K
+Load H
+***FENCE***
+Store G
+Load F
+***FENCE***
+Store G
+Load J
+***FENCE***
+Load D
+***FENCE***
+Load H
+***FENCE***
+Load R
+***FENCE***
+Store E
+Load F
+***FENCE***
+Store C
+Load F
+***FENCE***
+Store E
+Load R
