@@ -2,21 +2,19 @@
 
 #define MODEL 2
 #define INPUT 1
-#define INPUT_FILE_DIR "../trace_files/"
 #define SPACE_STRING " "
-//#define DBG
-//#define PARSE_DBG
+#define DBG
 
-using namespace std;
+using std::cout;
+using std::string;
+using std::ifstream;
+using std::vector;
+using std::endl;
+//using namespace std;
 
-#ifdef TESTING
-std::string inputFileDir = "../trace_files/";
-#else
 std::string inputFileDir = "./";
-#endif
 std::string spaceString = " ";
 
-std::vector<instruction> instructionHistory;
 /* Contains clock info for single instruction */
 std::vector<int> cycleVector (3, 0);
 
@@ -33,45 +31,30 @@ std::vector<char> storeBuffer;
 std::vector<string> parse_file(std::string fileName){
   std::vector<string> parsed_file_inputs;
   std::string inputFile = inputFileDir + fileName;
-  std::string fileLine, arg, firstLetter, lastLetter, lockNum, endLock = "k";
+  std::string fileLine, arg, firstLetter, lastLetter;
   ifstream infile(inputFile);
-  size_t foundSpace, len, foundK;
+  size_t foundSpace, len;
 
   while (getline(infile, fileLine)) {
     foundSpace = fileLine.find(spaceString);
     firstLetter = fileLine.front();
-    len = fileLine.size();
+    lastLetter = fileLine.back();
     if (foundSpace == string::npos) {
-      foundK = fileLine.find(endLock);
-      if(foundK != string::npos){
-        lastLetter = fileLine.substr(foundK+1,len);
-        lastLetter.append("\0");
-      }
       if (firstLetter == "L") {
         firstLetter = "X";
       }
     }
-    else{
-      lastLetter = fileLine.back();
-    }
     arg = firstLetter + lastLetter;
-#ifdef PARSE_DBG
-        cout << arg << endl;
-#endif
     parsed_file_inputs.push_back(arg);
     }
     return parsed_file_inputs;
 }
 
-std::string model;
-
-std::string sharedModel;
 /* Main */
 int main(int argc, char *argv[]) {
     std::vector<std::string> instructionVector = parse_file(argv[INPUT]);
     std::vector<int> lastInstruction;
-    string model = argv[MODEL];
-    sharedModel = model;
+    std::string model = argv[MODEL];
     if(model == "SC"){
       sc_simulator(instructionVector);
     }
@@ -79,31 +62,31 @@ int main(int argc, char *argv[]) {
      pc_simulator(instructionVector);
     }
     else if (model == "WO"){
-      wo_simulator(instructionVector);
+     return 0;
     }
     else if (model == "RC"){
-      rc_simulator(instructionVector);
+     return 0;
     }
     else{
       cout << "ERROR: model type not valid" << endl;
       return 0;
     }
 
-    lastInstruction = cycleVectorList.back();
     #ifdef DBG
-    cout << "The " << model << " total latency is : " << lastInstruction.at(2) << " cycles" << endl;
     print_cache(cacheVector);
+    cout << "The " << model << " total latency is : " << lastInstruction.at(2) << " cycles" << endl;
+    #else
     #endif
     return 0;
 }
 
-/*Simulator for sequential consistency model*/
+
 void wo_simulator(std::vector<std::string> argumentVector){
   static int clockCycle = 0;
   std::vector<string>::iterator it = argumentVector.begin();
   std::vector<int> cycleInfo;
   char previousInstruction, currentInstruction, location;
-  int  issueTime, avgCSTime, lockIssue, lockRetire, unlockComplete, csTime, csNumber, cycleTime, previousLoad, checkBack = 0;
+  int  avgCSTime, lockIssue, unlockComplete, csTime, csNumber, cycleTime, previousLoad, checkBack = 0;
   instruction_iterator i_it;
   csTime = 0;
   csNumber = 0;
@@ -122,22 +105,13 @@ void wo_simulator(std::vector<std::string> argumentVector){
     cycleVector.at(0) = clockCycle;
     // if this isn't the first instruction
     if(instructionHistory.size()==1){
-      cycleVector.at(0) = clockCycle;
       cycleVector.at(1) = clockCycle;
     }
     else{
-      previousInstruction = *(it-1)->begin();
-      if (previousInstruction == 'X') {
-        cycleVector.at(1) = cycleVectorList.back().at(2);
-#ifdef DBG
-      cout << "Previous instruction was a lock " << endl;
-      #endif
-      }
       //PROCESS LOCK
-      else if(currentInstruction == 'X'){
+      if(currentInstruction == 'X'){
        cycleVector.at(1) = cycleVectorList.back().at(2);
        lockIssue = cycleVector.at(1);
-       lockRetire = cycleVector.at(1) + cycleTime;
        csNumber++;
       }
       //PROCESS UNLOCK
@@ -145,35 +119,22 @@ void wo_simulator(std::vector<std::string> argumentVector){
         flush_store_buffer(clockCycle);
         cycleVector.at(1) = find_max_finish();
         unlockComplete = cycleVector.at(1) + cycleTime;
-        lockRetire = unlockComplete;
         csTime+=(unlockComplete - lockIssue);
       }
-      //process load store
-      else if (currentInstruction == 'L' || currentInstruction == 'S'){
-        cycleVector.at(1) = clockCycle;
+      else{
         i_it = locate_in_instruction_history(location);
-       if (i_it != instructionHistory.end()) {
+        if(i_it!=instructionHistory.end()){
           cycleVector.at(1) = i_it->cycle_info.at(2);
-#ifdef DBG
-          cout << "Instruction finish time: " << i_it->cycle_info.at(2) << endl;
-#endif
         }
-       else{
-         if(csNumber==0){
-           cycleVector.at(1)=clockCycle;
-         }
-         else{
-           cycleVector.at(1)=lockRetire;
-         }
-
-       }
+        else{
+          cycleVector.at(1) = cycleVectorList.back().at(2);
         }
       }
+    }
     //update retire time
     cycleVector.at(2) = cycleVector.at(1) + cycleTime;
     //add cycle info to instruction history
     instructionHistory.back().cycle_info = cycleVector;
-
     //unlock routine
     #ifdef DBG
     if(cycleTime==100)
@@ -224,9 +185,9 @@ void sc_simulator(std::vector<std::string> argumentVector){
       unlockComplete = cycleVector.at(1) + cycleTime;
       csTime += (unlockComplete - lockIssue);
     }
-#ifdef DBG
-    print_cycle_vector(cycleVector);
-#endif
+// #ifdef DBG
+//     print_cycle_vector(cycleVector);
+// #endif
     cycleVectorList.push_back(cycleVector);
     instructionHistory.back().cycle_info = cycleVector;
     clockCycle++;
@@ -234,6 +195,7 @@ void sc_simulator(std::vector<std::string> argumentVector){
   }
   cout<< instructionHistory.back().cycle_info.at(2) << " "<< csTime/csNumber << endl;
   return;
+
 }
 
 /*Simulator for processor consistency model*/
@@ -243,7 +205,6 @@ void pc_simulator(std::vector<std::string> argumentVector){
   std::vector<int> cycleInfo;
   char previousInstruction, currentInstruction, location;
   int  avgCSTime, lockIssue, unlockComplete, csTime, csNumber, cycleTime, previousLoad, checkBack = 0;
-
   csTime = 0;
   csNumber = 0;
   while(it!=argumentVector.end()){
@@ -313,104 +274,12 @@ void pc_simulator(std::vector<std::string> argumentVector){
   return;
 }
 
-void rc_simulator(std::vector<std::string> argumentVector){
-  static int clockCycle = 0;
-  std::vector<string>::iterator it = argumentVector.begin();
-  std::vector<int> cycleInfo;
-  char previousInstruction, currentInstruction, location;
-  int  issueTime, avgCSTime, lockIssue, lockRetire, unlockComplete, csTime,  cycleTime, previousLoad, csNumber=0, checkBack = 0;
-  instruction_iterator i_it;
-  csTime = 0;
-  csNumber = 0;
-  while(it!=argumentVector.end()){
-    #ifdef DBG
-    print_instruction(*it);
-    #endif
-    currentInstruction = it->at(0);
-    location = it->at(1);
-    instructionHistory.push_back(instruction());
-    instructionHistory.back().memoryLocation = location;
-    instructionHistory.back().operation = currentInstruction;
-    //if memory location exists in cache, cycle time is 10, if not, cycle time is 100
-    cycleTime = check_cache(location);
-    //set cycle time
-    cycleVector.at(0) = clockCycle;
-    // if this isn't the first instruction
-    if(instructionHistory.size()==1){
-      cycleVector.at(0) = clockCycle;
-      cycleVector.at(1) = clockCycle;
-    }
-    else{
-      previousInstruction = *(it-1)->begin();
-      if (previousInstruction == 'X') {
-        cycleVector.at(1) = find_max_finish();
-#ifdef DBG
-      cout << "Previous instruction was a lock " << endl;
-      #endif
-      }
-      else if (previousInstruction == 'U') {
-        cycleVector.at(1) = lockRetire;
-#ifdef DBG
-      cout << "Previous instruction was a unlock " << endl;
-      #endif
-      }
-      //PROCESS LOCK
-      else if(currentInstruction == 'X'){
-        if (csNumber == 0) {
-          cycleVector.at(1) = clockCycle;
-        } else {
-          cycleVector.at(1) = lockRetire;
-        }
-        lockIssue = cycleVector.at(1);
-        lockRetire = cycleVector.at(1) + cycleTime;
-        csNumber++;
-      }
-      //PROCESS UNLOCK
-      else if (currentInstruction == 'U') {
-        flush_store_buffer(clockCycle);
-        cycleVector.at(1) = find_max_finish();
-        unlockComplete = cycleVector.at(1) + cycleTime;
-        csTime+=(unlockComplete - lockIssue);
-      }
-      //process load store
-      else if (currentInstruction == 'L' || currentInstruction == 'S'){
-        cycleVector.at(1) = clockCycle;
-        i_it = locate_in_instruction_history(location);
-       if (i_it != instructionHistory.end()) {
-          cycleVector.at(1) = i_it->cycle_info.at(2);
-#ifdef DBG
-          cout << "Instruction finish time: " << i_it->cycle_info.at(2) << endl;
-#endif
-        }
-       else{
-         if(csNumber==0){
-           cycleVector.at(1)=clockCycle;
-         }
-         else{
-           cycleVector.at(1)=lockRetire;
-         }
-
-       }
-        }
-      }
-    //update retire time
-    cycleVector.at(2) = cycleVector.at(1) + cycleTime;
-    //add cycle info to instruction history
-    instructionHistory.back().cycle_info = cycleVector;
-
-    //unlock routine
-    #ifdef DBG
-    if(cycleTime==100)
-      cout << "We got a miss for " << location;
-    else
-      cout << "We got a hit for " << location;
-    print_cycle_vector(cycleVector);
-    #endif
-    cycleVectorList.push_back(cycleVector);
-    clockCycle++;
-    it++;
-  }
-  cout<< find_max_finish() << " "<< csTime/csNumber << endl;
+void print_instruction(std::string instructionString){
+  char instruction = instructionString[0];
+  char memoryLocation = instructionString[1];
+  #ifdef DBG
+  cout << "*******************now processing " << instruction << " " << memoryLocation << endl;
+  #endif
   return;
 }
 
@@ -440,6 +309,24 @@ void check_store_buffer(char thisMemoryLocation){
    storeBuffer.push_back(thisMemoryLocation);
  }
  return;
+}
+
+void print_cache(std::vector<char> thisCache){
+  cache_iterator it = thisCache.begin();
+  instruction_iterator i_it;
+  cout << endl;
+  if(thisCache.size()>0){
+    for (; it != thisCache.end(); it++) {
+      cout << *it;
+      i_it = locate_in_instruction_history(*it);
+      if (i_it != instructionHistory.end()) {
+//#ifdef DBG
+        print_cycle_vector(i_it->cycle_info);
+//#endif
+      }
+    }
+  }
+  return;
 }
 
 void flush_store_buffer(int currentClockCycle){
@@ -492,35 +379,16 @@ void update_instruction_history(int currentClockCycle, int cycleTime, char thisM
       return;
     }
   }
+  cout << endl ;
 return;
 }
 
 instruction_iterator locate_in_instruction_history(char thisMemoryLocation) {
   instruction_iterator instruction_it = instructionHistory.end();
-  instruction_it = instruction_it - 2;
-  for (; instruction_it != instructionHistory.begin(); instruction_it--) {
-    if (sharedModel == "WO") {
-      if (instruction_it->operation == 'X' ||
-          instruction_it->operation == 'U') {
-        // cout << endl << "Stop lock" << endl;
-        return instructionHistory.end();
-      }
-    }
-    if (sharedModel == "RC") {
-      // #ifdef DBG
-      //       cout << sharedModel << endl;
-      // #endif
-      if (instruction_it->operation == 'X') {
-        // cout << endl << "Stop lock" << endl;
-        return instructionHistory.end();
-      }
-    }
+  for (; instruction_it != instructionHistory.begin() + 1; instruction_it--) {
     if (instruction_it->memoryLocation == thisMemoryLocation) {
       return instruction_it;
     }
-  }
-  if (instruction_it->memoryLocation == thisMemoryLocation) {
-    return instruction_it;
   }
   return instructionHistory.end();
 }
@@ -546,3 +414,14 @@ int find_last_load(){
   }
   return maxFinish;
 }
+
+// int check_for_dependency(char thisMemoryLocation){
+//   int checkMax = 0, maxFinish = 0;
+//   instruction_iterator it = instructionHistory.begin();
+//   for (; it != (instructionHistory.end()-1); it++) {
+//     if(it->memoryLocation == thisMemoryLocation)
+//       maxFinish = it->cycle_info.at(2);
+//   }
+//   return maxFinish;
+
+// }

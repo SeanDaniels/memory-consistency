@@ -29,6 +29,7 @@ Memory Consistency Model Simulator
  Instruction
  Hit/Miss
  {Fetch_cycle, Issue_cycle, Retire_cycle}
+
  Store Q
  miss
  { 0, 0, 100}
@@ -40,7 +41,8 @@ Memory Consistency Model Simulator
  { 2, 2, 102}
  Lock2
  miss
-{ 3, 102, 202}
+ {3, 102, 202}
+
  Store G
  miss
  { 4, 202, 302}
@@ -53,6 +55,7 @@ Memory Consistency Model Simulator
  Unlock2
  hit
  { 7, 312, 322}
+
  Load X
  miss
  { 8, 322, 422}

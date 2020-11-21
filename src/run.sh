@@ -3,5 +3,7 @@ set -euo pipefail
 
 make clean
 make
-./sim_program2 file1.txt PC > ../output/output.txt
-diff ../output/output.txt ../validation_runs/small/validation_PC_one_critical_section.small.txt > ../output/diff.txt
+./sim_program2 trace_one_critical_section.small.txt RC
+./sim_program2 trace_one_critical_section.small.txt PC
+./sim_program2 trace_one_critical_section.small.txt SC
+./sim_program2 trace_one_critical_section.small.txt WO

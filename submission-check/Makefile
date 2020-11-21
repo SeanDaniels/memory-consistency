@@ -5,8 +5,8 @@
 # @version 0.1
 CC = g++
 CCFLAGS = -g -Wall -std=c++0x
-DEPS = main.h print.h
-OBJ = main.o print.o
+DEPS = main.h
+OBJ = main.o
 TARGET = sim_program2
 
 %.o: %.cpp $(DEPS)
