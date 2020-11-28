@@ -1,0 +1,56 @@
+#+TITLE: Memory Consistency
+*  Report Structure
+ Compare and discuss the execution time for each of the traces between the following consistency models:
+ SC
+ WO
+ RC
+ PC [Optional for ECE406 students]
+ Compare the average critical section time for each of the traces between the following consistency models:
+ SC
+ WO
+ RC
+ PC [Optional for ECE406 students]
+* Introduction
+The purpose of this project was to simulate the differences between 4 memory consistency models: release consistency, sequential consistency, processor consistency, and weak ordering.
+* Latency Results
+The simulation that I created produced the following results with respect to total latency:
+Sequential Consistency
+2080
+Processor Consistency
+1400
+Weak Ordering
+520
+Release Consistency
+305
+
+Sequential consistency produced the longest latency, with 2080 clock cycles. In this scenario, it makes sense for this to be the case. Sequential consistency sacrifices efficiency for simplicity. In order to protect memory instructions, all instructions are fenced. This requires no logic, just a delay between the finishing of one instruction and beginning of another.
+
+Processor consistency shortened the latency of the instruction set by a significant margin. This is accomplished by removing the fence between an earlier store and a later load. The removal of this single fence scenario has suprising pay offs. The amount of logic associated with maintaining the store buffer, and keeping track of the appropriate clock cycles was greater than the other remaining two consistency models.
+
+Weak ordering produced a sharp reduction in latency. This is accomplished by removing all fences between non-dependent instructions. Suprisingly, the logic associated with this model was less cumbersome than that of processor consistency.
+
+Release consistency produced the lowest latency. The only fences that exist between instructions is that of locks and dependent instructions. Additionally, instuctions after an unlock call can begin execution before a lock is activated, if the instructions exist in the fetch buffer before the lock is issued.
+
+* Critical Section Results
+The average time in the critical section was determined by calculating the total number of time spent in a critical section and the number of critical sections in the trace. This is an important metric. The critical section should be executed in the least amount of time possible.
+
+The simulation that I created produced the following results with respect to average critical section time:
+
+Sequential Consistency
+1340
+Processor Consistency
+920
+Weak Ordering
+300
+Release Consistency
+300
+
+Sequential consistency produced the longest average critical section. Again, in this scenario, it makes sense for this to be the case. The same draw backs of the model exist within the critical section of the code.
+
+Processor consistency again shortened the average critical section of the instruction set, but by a less significant margin. This indicates that, for this set of instructions, the payoff for processor consistency resides mainly outside of the critical section.
+
+Weak ordering and release consistency had the same average critical section time. Between these two models, the gain is most apparent outside of the critical section. Weak ordeing loses its competetive edge after leaving the critical section, because all of the instructions after the unlock need to wait until all of the instructions within the lock have completed before they can begin execution.
+* Overall Take Away
+Weak ordering is my preferred model. The implementation is the most intuitive and strikes a solid middle ground between performance and ease of deployment.
+* A Note
+ Due to scheduling difficulties, I wasn't able to begin work on this project until Wednesday of this week. Since then, I have had two finals and another project deadline. I developed this code without looking at the multi critical section trace files. I did not realize that the lock numbers would be greater than one digit. Becuase of that, the parsing implementation of my code only works for locks in the format lockX/unlockX, where x is a single digit value. I realized this too late and had to decide between fixing the code or writing the report. I was only able to generate results for the single critical section code.
